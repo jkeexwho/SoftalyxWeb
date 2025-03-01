@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Softalyx - Your Atlassian Solutions Partner. Get in touch for Atlassian services, licenses, and support.">
+    <meta name="keywords" content="contact Atlassian partner, Atlassian support, Jira help, Confluence support">
+    <title>Contact Us - Softalyx Atlassian Solutions</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Softalyx Logo" width="180" height="50">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="licenses.html">Licenses</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our Atlassian experts</p>
+        </div>
+        <div class="banner-shape"></div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@softalyx.com</p>
+                    <p>sales@softalyx.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+1 (123) 456-7890</p>
+                    <p>Mon-Fri, 9am-6pm EST</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>123 Business Avenue</p>
+                    <p>New York, NY 10001</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Available on WhatsApp</p>
+                    <p>and Telegram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+            </div>
+            <div class="map-container">
+                <!-- Map placeholder using SVG -->
+                <div class="map-placeholder">
+                    <object data="images/map-placeholder.svg" type="image/svg+xml" width="100%" height="400">
+                        <img src="images/map-placeholder.svg" alt="Office Location Map" width="100%">
+                    </object>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-content">
+                    <div class="section-title">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="services">Services</option>
+                                    <option value="licenses">Licenses</option>
+                                    <option value="support">Technical Support</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="form-image">
+                    <img src="images/contact-image.jpg" alt="Contact Softalyx">
+                    <div class="image-overlay">
+                        <h3>We're Here to Help</h3>
+                        <p>Our team of Atlassian experts is ready to assist you with any questions or requirements.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can you respond to inquiries?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 business hours. For urgent matters, please call our support line directly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer emergency support for Atlassian products?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer emergency support for critical issues with Atlassian products. Our support team is available 24/7 for clients with support contracts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you help with migrating from Server to Cloud?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We specialize in Atlassian Server to Cloud migrations and can help ensure a smooth transition with minimal disruption to your workflows.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept for licenses?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, bank transfers, and PayPal. For enterprise clients, we can also arrange custom payment terms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="Softalyx Logo" width="150" height="42">
+                    <p>Your trusted Atlassian Solutions Partner</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="licenses.html">Licenses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@softalyx.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Softalyx. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chat-popup">
+            <div class="chat-header">
+                <h4>Contact Us</h4>
+                <button class="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <p>Connect with us on:</p>
+                <a href="#" class="chat-option"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#" class="chat-option"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
