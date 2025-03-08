@@ -8,8 +8,6 @@
 const adminUsers = [
     {
         username: 'admin_softalyx',
-        // Password hash for 'Charl1e!' 
-        // Generated using bcrypt with 10 rounds
         passwordHash: '$2a$10$UvBOeHtSN.w6U0gQw1qVnuVqo9zVhnQbTndCizQ4SpQgkskwKnPJa',
         role: 'admin',
         name: 'Softalyx Admin',
@@ -18,11 +16,6 @@ const adminUsers = [
     }
 ];
 
-/**
- * Password verification
- * In production, this would use proper password hashing like bcrypt
- * For browser-side implementation, we're using a simplified approach
- */
 async function verifyPassword(password, storedHash) {
     // Charl1e! hash: $2a$10$UvBOeHtSN.w6U0gQw1qVnuVqo9zVhnQbTndCizQ4SpQgkskwKnPJa
     
