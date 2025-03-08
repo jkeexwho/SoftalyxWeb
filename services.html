@@ -6,8 +6,12 @@
     <meta name="description" content="Softalyx services - Atlassian outsourcing, license reselling, and expert training.">
     <meta name="keywords" content="Atlassian services, Jira outsourcing, Atlassian training, DevOps services">
     <title>Services - Softalyx Atlassian Solutions</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/faviconsoftalyx.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileImage" content="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -28,6 +32,20 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <ul class="language-options">
+                    <li><a href="#" class="active" data-lang="en">EN</a></li>
+                    <li><a href="#" data-lang="ua">UA</a></li>
+                    <li><a href="#" data-lang="ru">RU</a></li>
+                </ul>
+            </div>
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -70,40 +88,19 @@
                             </div>
                             <div class="feature-text">
                                 <h3>DevOps Services</h3>
-                                <p>Expert implementation of CI/CD pipelines, infrastructure automation, and cloud migration for Atlassian tools.</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h3>Data Migration</h3>
-                                <p>Seamless migration of your data between Atlassian products or from legacy systems to Atlassian ecosystem.</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-plug"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h3>Custom Integrations</h3>
-                                <p>Development of custom plugins and integrations to connect your Atlassian tools with other business systems.</p>
+                                <p>Expert infrastructure automation, cloud migration, and server administration for Atlassian Data Center products.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="service-image">
-                    <img src="images/outsourcing.jpg" alt="Atlassian Outsourcing Services">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- License Reselling Section -->
-    <section class="service-section alt-bg">
+    <!-- Licensing Section -->
+    <section class="service-section">
         <div class="container">
-            <div class="service-content reverse">
+            <div class="service-content">
                 <div class="service-info">
                     <div class="section-title">
                         <h2>License Reselling</h2>
@@ -114,7 +111,7 @@
                     <div class="service-features">
                         <div class="feature">
                             <div class="feature-icon">
-                                <i class="fas fa-percentage"></i>
+                                <i class="fas fa-tags"></i>
                             </div>
                             <div class="feature-text">
                                 <h3>Volume Discounts</h3>
@@ -140,10 +137,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="licenses.html" class="btn btn-primary">View License Options</a>
-                </div>
-                <div class="service-image">
-                    <img src="images/licenses.jpg" alt="Atlassian License Reselling">
                 </div>
             </div>
         </div>
@@ -185,13 +178,10 @@
                             </div>
                             <div class="feature-text">
                                 <h3>Certification Preparation</h3>
-                                <p>Specialized training to help your team prepare for Atlassian certification exams.</p>
+                                <p>Specialized training to help your team prepare for Atlassian certification exams with access to Atlassian accreditation resources.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="service-image">
-                    <img src="images/training.jpg" alt="Atlassian Training Services">
                 </div>
             </div>
         </div>
@@ -247,8 +237,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.svg" alt="Softalyx Logo" width="150" height="42">
-                    <p>Your trusted Atlassian Solutions Partner</p>
+                    <img src="images/logo-white.svg" alt="Softalyx Logo" width="150" height="42" style="filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));">
+                    <p>Expert Atlassian Services</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -261,17 +251,16 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p><i class="fas fa-envelope"></i> info@softalyx.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contact@softalyx.com</p>
+                    <p><i class="fas fa-phone"></i> +380660087119</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/softalyx" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/jkeeq" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Softalyx. All rights reserved.</p>
+                <p>&copy; 2025 Softalyx. All rights reserved. <a href="admin-login.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: underline;">Admin</a></p>
             </div>
         </div>
     </footer>
@@ -288,12 +277,14 @@
             </div>
             <div class="chat-body">
                 <p>Connect with us on:</p>
-                <a href="#" class="chat-option"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="#" class="chat-option"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://t.me/jkeeq" class="chat-option" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
         </div>
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/apply-admin-changes.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html> 

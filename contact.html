@@ -6,8 +6,12 @@
     <meta name="description" content="Contact Softalyx - Your Atlassian Solutions Partner. Get in touch for Atlassian services, licenses, and support.">
     <meta name="keywords" content="contact Atlassian partner, Atlassian support, Jira help, Confluence support">
     <title>Contact Us - Softalyx Atlassian Solutions</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/faviconsoftalyx.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileImage" content="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -28,6 +32,20 @@
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <ul class="language-options">
+                    <li><a href="#" class="active" data-lang="en">EN</a></li>
+                    <li><a href="#" data-lang="ua">UA</a></li>
+                    <li><a href="#" data-lang="ru">RU</a></li>
+                </ul>
+            </div>
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -52,7 +70,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email Us</h3>
-                    <p>info@softalyx.com</p>
+                    <p>contact@softalyx.com</p>
                     <p>sales@softalyx.com</p>
                 </div>
                 <div class="contact-card">
@@ -60,37 +78,37 @@
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3>Call Us</h3>
-                    <p>+1 (123) 456-7890</p>
-                    <p>Mon-Fri, 9am-6pm EST</p>
+                    <p>+380660087119</p>
+                    <p>Mon-Fri, 9:00 - 19:00 Kyiv time</p>
                 </div>
+                <!-- Location card -->
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Visit Us</h3>
-                    <p>123 Business Avenue</p>
-                    <p>New York, NY 10001</p>
+                    <p>Sofia, Bulgaria</p>
+                    <p>Lviv, Ukraine</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3>Live Chat</h3>
-                    <p>Available on WhatsApp</p>
-                    <p>and Telegram</p>
+                    <p>Available on Telegram</p>
+                    <p>@jkeeq</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
+    <!-- Map Section - Temporarily hidden until we have an office
     <section class="map-section">
         <div class="container">
             <div class="section-title">
                 <h2>Our Location</h2>
             </div>
             <div class="map-container">
-                <!-- Map placeholder using SVG -->
                 <div class="map-placeholder">
                     <object data="images/map-placeholder.svg" type="image/svg+xml" width="100%" height="400">
                         <img src="images/map-placeholder.svg" alt="Office Location Map" width="100%">
@@ -99,62 +117,53 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- Contact Form -->
     <section class="contact-form">
         <div class="container">
-            <div class="form-container">
-                <div class="form-content">
-                    <div class="section-title">
-                        <h2>Send Us a Message</h2>
-                        <p>Fill out the form below and we'll get back to you as soon as possible</p>
-                    </div>
-                    <form id="contact-form">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject">
-                                    <option value="general">General Inquiry</option>
-                                    <option value="services">Services</option>
-                                    <option value="licenses">Licenses</option>
-                                    <option value="support">Technical Support</option>
-                                </select>
-                            </div>
+            <div class="section-title">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible</p>
+            </div>
+            <div class="centered-form">
+                <form id="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-                <div class="form-image">
-                    <img src="images/contact-image.jpg" alt="Contact Softalyx">
-                    <div class="image-overlay">
-                        <h3>We're Here to Help</h3>
-                        <p>Our team of Atlassian experts is ready to assist you with any questions or requirements.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                     </div>
-                </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="phone" data-i18n="phone">Phone Number (optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" selected disabled data-i18n="subject">Select a subject</option>
+                                <option value="general" data-i18n="general_inquiry">General Inquiry</option>
+                                <option value="services" data-i18n="services_info">Services Information</option>
+                                <option value="licenses" data-i18n="license_purchase">License Purchase</option>
+                                <option value="support" data-i18n="technical_support">Technical Support</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="send">Send Message</button>
+                    <div id="form-success" class="admin-alert admin-alert-success" style="display: none; margin-top: 15px;">
+                        Your message has been sent successfully. We'll get back to you soon!
+                    </div>
+                    <p class="form-note"><i class="fas fa-info-circle"></i> Your information will be sent to our team via email. We take your privacy seriously and will not share your data with third parties.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -163,7 +172,7 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
+                <h2 data-i18n="faq_heading">Frequently Asked Questions</h2>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
@@ -172,16 +181,16 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>We typically respond to all inquiries within 24 business hours. For urgent matters, please call our support line directly.</p>
+                        <p>We typically respond to all inquiries within 2 business days. For urgent matters, please call our support line directly or write to us on Telegram.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Do you offer emergency support for Atlassian products?</h3>
+                        <h3>Do you offer on-call support for Atlassian products?</h3>
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we offer emergency support for critical issues with Atlassian products. Our support team is available 24/7 for clients with support contracts.</p>
+                        <p>Yes, we offer on-call support for critical issues with Atlassian products. Our support team is available 24/7 for clients with support contracts.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -190,7 +199,7 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Absolutely! We specialize in Atlassian Server to Cloud migrations and can help ensure a smooth transition with minimal disruption to your workflows.</p>
+                        <p>Absolutely! We specialize in Atlassian Server to Cloud migrations as well as Cloud to Cloud migrations and can help ensure a smooth transition with minimal disruption to your workflows.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -199,7 +208,7 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>We accept all major credit cards, bank transfers, and PayPal. For enterprise clients, we can also arrange custom payment terms.</p>
+                        <p>We accept bank transfers. For enterprise clients, we can also arrange custom payment terms.</p>
                     </div>
                 </div>
             </div>
@@ -211,8 +220,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.svg" alt="Softalyx Logo" width="150" height="42">
-                    <p>Your trusted Atlassian Solutions Partner</p>
+                    <img src="images/logo-white.svg" alt="Softalyx Logo" width="150" height="42" style="filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));">
+                    <p>Expert Atlassian Services</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -225,17 +234,16 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p><i class="fas fa-envelope"></i> info@softalyx.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contact@softalyx.com</p>
+                    <p><i class="fas fa-phone"></i> +380660087119</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/softalyx" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/jkeeq" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Softalyx. All rights reserved.</p>
+                <p>&copy; 2025 Softalyx. All rights reserved. <a href="admin-login.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: underline;">Admin</a></p>
             </div>
         </div>
     </footer>
@@ -252,12 +260,62 @@
             </div>
             <div class="chat-body">
                 <p>Connect with us on:</p>
-                <a href="#" class="chat-option"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="#" class="chat-option"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://t.me/jkeeq" class="chat-option" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
         </div>
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/apply-admin-changes.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle contact form submission
+            const contactForm = document.getElementById('contact-form');
+            const formSuccess = document.getElementById('form-success');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        subject: document.getElementById('subject').value,
+                        message: document.getElementById('message').value
+                    };
+                    
+                    // Save to admin panel
+                    if (window.handleContactFormSubmission) {
+                        window.handleContactFormSubmission(formData);
+                    } else {
+                        // Fallback if admin.js is not loaded
+                        const submissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
+                        submissions.unshift({
+                            id: Date.now(),
+                            date: new Date().toISOString(),
+                            ...formData
+                        });
+                        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+                    }
+                    
+                    // Show success message
+                    formSuccess.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        formSuccess.style.display = 'none';
+                    }, 5000);
+                });
+            }
+        });
+    </script>
 </body>
 </html> 

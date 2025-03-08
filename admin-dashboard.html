@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Softalyx</title>
+    <link rel="icon" href="images/faviconsoftalyx.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileImage" content="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Hide language switcher in admin panel */
+        .language-switcher {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="admin-dashboard">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="admin-title">
+                <img src="images/logo.svg" alt="Softalyx Logo" width="120" style="background-color: #f0f0f0; padding: 5px; border-radius: 5px;">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="admin-actions">
+                <a href="index.html" class="btn btn-secondary" target="_blank">View Site</a>
+                <a href="#" id="admin-logout" class="btn btn-primary">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+        <nav class="admin-sidebar-menu">
+            <ul>
+                <li><a href="#" class="active" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#" data-section="contact-info"><i class="fas fa-address-card"></i> Contact Information</a></li>
+                <li><a href="#" data-section="social-links"><i class="fas fa-share-alt"></i> Social Links</a></li>
+                <li><a href="#" data-section="work-hours"><i class="fas fa-clock"></i> Work Hours</a></li>
+                <li><a href="#" data-section="location"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                <li><a href="#" data-section="faq-editor"><i class="fas fa-question-circle"></i> FAQ Editor</a></li>
+                <li><a href="#" data-section="footer-settings"><i class="fas fa-shoe-prints"></i> Footer Settings</a></li>
+                <li><a href="#" data-section="logo-settings"><i class="fas fa-image"></i> Logo Settings</a></li>
+                <li><a href="#" data-section="client-logos"><i class="fas fa-building"></i> Client Logos</a></li>
+                <li><a href="#" data-section="language-settings"><i class="fas fa-language"></i> Language Settings</a></li>
+                <li><a href="#" data-section="contact-submissions"><i class="fas fa-envelope"></i> Contact Submissions</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Admin Content -->
+    <main class="admin-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="admin-section active">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Welcome to Softalyx Admin Panel</h2>
+                </div>
+                <p>Use the sidebar navigation to manage different aspects of your website.</p>
+                <div class="admin-alert admin-alert-info" style="margin-top: 20px;">
+                    <p><strong>Note:</strong> All changes made in this admin panel will be saved to local storage in your browser. In a production environment, these would be saved to a database.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section id="contact-info" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Contact Information</h2>
+                </div>
+                <form id="contact-info-form">
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" name="phone-number" value="+380660087119">
+                        </div>
+                        <div class="admin-form-group">
+                            <label for="primary-email">Primary Email</label>
+                            <input type="email" id="primary-email" name="primary-email" value="contact@softalyx.com">
+                        </div>
+                    </div>
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="secondary-email">Secondary Email</label>
+                            <input type="email" id="secondary-email" name="secondary-email" value="sales@softalyx.com">
+                        </div>
+                    </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Social Links Section -->
+        <section id="social-links" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Social Media Links</h2>
+                </div>
+                <form id="social-links-form">
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="linkedin-url">LinkedIn URL</label>
+                            <input type="url" id="linkedin-url" name="linkedin-url" placeholder="https://www.linkedin.com/company/your-company">
+                        </div>
+                        <div class="admin-form-group">
+                            <label for="telegram-url">Telegram URL</label>
+                            <input type="url" id="telegram-url" name="telegram-url" placeholder="https://t.me/your-username">
+                        </div>
+                    </div>
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="whatsapp-url">WhatsApp URL</label>
+                            <input type="url" id="whatsapp-url" name="whatsapp-url" placeholder="https://wa.me/your-number">
+                        </div>
+                    </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Work Hours Section -->
+        <section id="work-hours" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Work Hours</h2>
+                </div>
+                <form id="work-hours-form">
+                    <div class="admin-form-group">
+                        <label for="work-hours">Work Hours</label>
+                        <input type="text" id="work-hours" name="work-hours" value="9:00 - 19:00 Kyiv time">
+                    </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Location</h2>
+                </div>
+                <form id="location-form">
+                    <div class="admin-form-group">
+                        <label for="main-address">Main Office</label>
+                        <input type="text" id="main-address" name="main-address" value="Sofia, Bulgaria">
+                    </div>
+                    <div class="admin-form-group">
+                        <label for="secondary-address">Secondary Office</label>
+                        <input type="text" id="secondary-address" name="secondary-address" value="Lviv, Ukraine">
+                    </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h3>Location Visibility</h3>
+                </div>
+                <div class="admin-card-content">
+                    <div id="location-toggle-container"></div>
+                    <p class="form-note">When enabled, the location card and map will be visible on the contact page.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Editor Section -->
+        <section id="faq-editor" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>FAQ Editor</h2>
+                </div>
+                <div id="faq-items-container">
+                    <!-- FAQ items will be dynamically added here -->
+                </div>
+                <button id="add-faq" class="btn btn-secondary faq-add-button">
+                    <i class="fas fa-plus"></i> Add New FAQ
+                </button>
+                <div class="admin-form-actions">
+                    <button id="save-faqs" class="btn btn-primary">Save All FAQs</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Settings Section -->
+        <section id="footer-settings" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Footer Settings</h2>
+                </div>
+                <form id="footer-settings-form">
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="copyright-year">Copyright Year</label>
+                            <input type="number" id="copyright-year" name="copyright-year" value="2025">
+                        </div>
+                        <div class="admin-form-group">
+                            <label for="footer-tagline">Footer Tagline</label>
+                            <input type="text" id="footer-tagline" name="footer-tagline" value="Your trusted Atlassian Solutions Partner">
+                        </div>
+                    </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Logo Settings Section -->
+        <section id="logo-settings" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Logo Settings</h2>
+                </div>
+                <form id="logo-settings-form">
+                    <div class="admin-form-group">
+                        <label for="header-tagline">Header Tagline (next to logo)</label>
+                        <input type="text" id="header-tagline" name="header-tagline" placeholder="e.g., Atlassian Solutions Partner">
+                    </div>
+                    <div class="admin-form-group">
+                        <label>Logo Image</label>
+                        <div class="client-logo-upload">
+                            <input type="file" id="logo-upload" accept="image/*">
+                            <label for="logo-upload"><i class="fas fa-upload"></i> Upload New Logo</label>
+                        </div>
+                        <p class="form-note">Recommended size: 180x50 pixels. Supported formats: SVG, PNG, JPG.</p>
+                    </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Client Logos Section -->
+        <section id="client-logos" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Client Logos</h2>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Client Logos Visibility</h3>
+                    </div>
+                    <div class="admin-card-content">
+                        <div id="client-toggle-container"></div>
+                        <p class="form-note">When enabled, the "Trusted By Our Clients" section will be visible on the homepage.</p>
+                    </div>
+                </div>
+                <div class="client-logo-grid" id="client-logos-container">
+                    <!-- Client logos will be dynamically added here -->
+                </div>
+                <div class="client-logo-upload">
+                    <input type="file" id="client-logo-upload" accept="image/*">
+                    <label for="client-logo-upload"><i class="fas fa-upload"></i> Upload Client Logo</label>
+                </div>
+                <div class="admin-form-actions">
+                    <button id="save-client-logos" class="btn btn-primary">Save Changes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Language Settings Section -->
+        <section id="language-settings" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Language Settings</h2>
+                </div>
+                <div class="admin-card-body">
+                    <div class="language-editor-container">
+                        <div class="language-tabs">
+                            <button class="language-tab active" data-lang="en">English</button>
+                            <button class="language-tab" data-lang="ua">Ukrainian</button>
+                            <button class="language-tab" data-lang="ru">Russian</button>
+                        </div>
+                        
+                        <div class="language-content active" id="lang-en">
+                            <!-- English translations will be loaded here -->
+                        </div>
+                        
+                        <div class="language-content" id="lang-ua">
+                            <!-- Ukrainian translations will be loaded here -->
+                        </div>
+                        
+                        <div class="language-content" id="lang-ru">
+                            <!-- Russian translations will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="save-language-settings">Save Changes</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Submissions Section -->
+        <section id="contact-submissions" class="admin-section">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h3>Contact Form Submissions</h3>
+                </div>
+                <div class="admin-card-body">
+                    <div class="submissions-container">
+                        <div class="submissions-list" id="submissions-list">
+                            <!-- Contact submissions will be loaded here -->
+                            <p class="no-submissions">No submissions yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin-auth.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/toggle-controls.js"></script>
+</body>
+</html> 

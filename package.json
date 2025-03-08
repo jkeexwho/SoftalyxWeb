@@ -1,0 +1,16 @@
+{
+  "name": "softalyx-admin",
+  "version": "1.0.0",
+  "description": "Softalyx Admin Panel",
+  "main": "js/admin.js",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "@babel/preset-env": "^7.22.0"
+  },
+  "scripts": {
+    "build": "babel js/components -d js/dist"
+  }
+} 

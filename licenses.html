@@ -6,10 +6,91 @@
     <meta name="description" content="Buy Atlassian licenses at competitive prices. Volume discounts, expert guidance, and ongoing support.">
     <meta name="keywords" content="Atlassian licenses, buy Jira, Confluence license, Atlassian reseller">
     <title>Atlassian Licenses - Softalyx Atlassian Solutions</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/faviconsoftalyx.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileImage" content="images/faviconsoftalyx.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .product-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding: 8px;
+            background-color: #DEEBFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .product-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .product-name {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        tr:hover .product-icon {
+            background-color: #CCE0FF;
+        }
+        
+        .atlassian-link:hover {
+            background-color: #E6EFFF;
+            box-shadow: 0 1px 3px rgba(0, 82, 204, 0.2);
+            transform: translateY(-1px);
+        }
+        .atlassian-link:active {
+            transform: translateY(0);
+        }
+        
+        .external-link-container {
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .external-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0052CC;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 5px 0;
+        }
+        
+        .external-link:hover {
+            background-color: #0747A6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .external-link:active {
+            transform: translateY(0);
+        }
+        
+        .external-link i {
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -28,6 +109,20 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <ul class="language-options">
+                    <li><a href="#" class="active" data-lang="en">EN</a></li>
+                    <li><a href="#" data-lang="ua">UA</a></li>
+                    <li><a href="#" data-lang="ru">RU</a></li>
+                </ul>
+            </div>
+            <!-- Theme Switcher -->
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -43,36 +138,50 @@
         <div class="banner-shape"></div>
     </section>
 
-    <!-- License Introduction -->
-    <section class="license-intro">
+    <!-- Licensing Section -->
+    <section class="licensing-section">
         <div class="container">
-            <div class="section-title">
+            <!-- Temporarily hidden until partnership is approved
+            <div class="licensing-intro">
                 <h2>Authorized Atlassian Partner</h2>
-            </div>
-            <div class="intro-content">
-                <div class="intro-text">
-                    <p>As an authorized Atlassian Solutions Partner, Softalyx provides competitive pricing on the full range of Atlassian products. Our licensing experts will help you select the right products and tiers for your organization's needs, ensuring you get the best value for your investment.</p>
-                    <div class="intro-features">
-                        <div class="intro-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Official Atlassian Partner</span>
-                        </div>
-                        <div class="intro-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Volume Discounts Available</span>
-                        </div>
-                        <div class="intro-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>License Management Portal</span>
-                        </div>
-                        <div class="intro-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Expert Configuration Support</span>
-                        </div>
-                    </div>
+                <div class="partner-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Official Atlassian Partner</span>
                 </div>
-                <div class="intro-image">
-                    <img src="images/atlassian-partner.jpg" alt="Atlassian Partner">
+                <p>As an authorized Atlassian Solutions Partner, Softalyx provides competitive pricing on the full range of Atlassian products. Our licensing experts will help you select the right products and tiers for your organization's needs, ensuring you get the best value for your investment.</p>
+            </div>
+            -->
+            
+            <div class="benefits-grid">
+                <!-- Temporarily hidden until partnership is approved
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Official Atlassian Partner</h3>
+                    <p>We provide official Atlassian licenses with direct support from the vendor</p>
+                </div>
+                -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Volume Discounts Available</h3>
+                    <p>Get better rates with volume purchases across all Atlassian products</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Comprehensive License Tracking</h3>
+                    <p>We handle all license documentation and provide regular renewal reminders</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Expert Configuration Support</h3>
+                    <p>Get help with license selection, installation, and ongoing configuration</p>
                 </div>
             </div>
         </div>
@@ -83,7 +192,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Atlassian Products</h2>
-                <p>Explore our comprehensive range of Atlassian products and pricing tiers</p>
+                <p>Explore our comprehensive range of Atlassian products</p>
             </div>
             <div class="table-container">
                 <table class="license-table">
@@ -91,67 +200,77 @@
                         <tr>
                             <th>Product</th>
                             <th>Description</th>
-                            <th>Standard</th>
-                            <th>Premium</th>
-                            <th>Enterprise</th>
+                            <th>Price</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="product-name">
-                                <img src="images/jira-software.png" alt="Jira Software" class="product-icon">
+                                <div class="product-icon">
+                                    <img src="images/jira.png" alt="Jira Software">
+                                </div>
                                 <span>Jira Software</span>
                             </td>
                             <td>Project and issue tracking for software teams</td>
-                            <td class="price">$7.75 <span class="per">per user/month</span></td>
-                            <td class="price">$15.25 <span class="per">per user/month</span></td>
-                            <td><a href="contact.html" class="btn-text">Contact Us</a></td>
+                            <td class="price">Negotiable</td>
+                            <td><a href="contact.html" class="btn-text">Request a Quote</a></td>
                         </tr>
                         <tr>
                             <td class="product-name">
-                                <img src="images/confluence.png" alt="Confluence" class="product-icon">
+                                <div class="product-icon">
+                                    <img src="images/confluence.png" alt="Confluence">
+                                </div>
                                 <span>Confluence</span>
                             </td>
                             <td>Content collaboration for teams</td>
-                            <td class="price">$5.75 <span class="per">per user/month</span></td>
-                            <td class="price">$11.00 <span class="per">per user/month</span></td>
-                            <td><a href="contact.html" class="btn-text">Contact Us</a></td>
+                            <td class="price">Negotiable</td>
+                            <td><a href="contact.html" class="btn-text">Request a Quote</a></td>
                         </tr>
                         <tr>
                             <td class="product-name">
-                                <img src="images/jira-service-management.png" alt="Jira Service Management" class="product-icon">
+                                <div class="product-icon">
+                                    <img src="images/jsd.png" alt="Jira Service Management">
+                                </div>
                                 <span>Jira Service Management</span>
                             </td>
                             <td>Service desk and customer support solution</td>
-                            <td class="price">$20.00 <span class="per">per agent/month</span></td>
-                            <td class="price">$45.00 <span class="per">per agent/month</span></td>
-                            <td><a href="contact.html" class="btn-text">Contact Us</a></td>
+                            <td class="price">Negotiable</td>
+                            <td><a href="contact.html" class="btn-text">Request a Quote</a></td>
                         </tr>
                         <tr>
                             <td class="product-name">
-                                <img src="images/bitbucket.png" alt="Bitbucket" class="product-icon">
+                                <div class="product-icon">
+                                    <img src="images/bitbucket.png" alt="Bitbucket">
+                                </div>
                                 <span>Bitbucket</span>
                             </td>
                             <td>Git code management for teams</td>
-                            <td class="price">$3.00 <span class="per">per user/month</span></td>
-                            <td class="price">$6.00 <span class="per">per user/month</span></td>
-                            <td><a href="contact.html" class="btn-text">Contact Us</a></td>
+                            <td class="price">Negotiable</td>
+                            <td><a href="contact.html" class="btn-text">Request a Quote</a></td>
                         </tr>
                         <tr>
                             <td class="product-name">
-                                <img src="images/trello.png" alt="Trello" class="product-icon">
+                                <div class="product-icon">
+                                    <img src="images/trello.png" alt="Trello">
+                                </div>
                                 <span>Trello</span>
                             </td>
                             <td>Visual project management</td>
-                            <td class="price">$5.00 <span class="per">per user/month</span></td>
-                            <td class="price">$10.00 <span class="per">per user/month</span></td>
-                            <td class="price">$17.50 <span class="per">per user/month</span></td>
+                            <td class="price">Negotiable</td>
+                            <td><a href="contact.html" class="btn-text">Request a Quote</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="table-note">
-                <p><i class="fas fa-info-circle"></i> Prices are indicative and may vary based on volume, term length, and current promotions. Contact us for a personalized quote.</p>
+                <p data-i18n="products_note"><i class="fas fa-info-circle"></i> This is not a complete list of available products.</p>
+                <div class="external-link-container">
+                    <a href="https://www.atlassian.com/software" target="_blank" rel="noopener noreferrer" class="external-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        Atlassian Products Catalog
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -204,14 +323,86 @@
                     <p>Contact our licensing team for a personalized quote tailored to your organization's needs.</p>
                     <ul class="quote-features">
                         <li><i class="fas fa-check"></i> Volume discounts available</li>
-                        <li><i class="fas fa-check"></i> Free license migration assistance</li>
-                        <li><i class="fas fa-check"></i> Expert configuration support</li>
-                        <li><i class="fas fa-check"></i> Flexible payment options</li>
+                        <li><i class="fas fa-check"></i> Expert product selection advice</li>
+                        <li><i class="fas fa-check"></i> Fast license delivery</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
                     </ul>
                 </div>
                 <div class="quote-cta">
                     <a href="contact.html" class="btn btn-primary">Request a Quote</a>
-                    <p class="quote-note">Or call us at: <strong>+1 (123) 456-7890</strong></p>
+                    <p class="quote-note"><span data-i18n="call_us">Or call us at:</span> <strong>+(380)660087119</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="faq_heading">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the steps to get a license?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The process is simple:</p>
+                        <div class="license-steps">
+                            <div class="license-step">
+                                <div class="step-number">1</div>
+                                <div class="step-icon"><i class="fas fa-calculator"></i></div>
+                                <div class="step-content">
+                                    <h4 data-i18n="step_quote">Get a Quote</h4>
+                                    <p data-i18n="step_quote_desc">We provide you with an estimated discount based on your configuration (users, version, host type, etc.)</p>
+                                </div>
+                            </div>
+                            <div class="license-step">
+                                <div class="step-number">2</div>
+                                <div class="step-icon"><i class="fas fa-file-contract"></i></div>
+                                <div class="step-content">
+                                    <h4 data-i18n="step_contract">Sign Contract</h4>
+                                    <p data-i18n="step_contract_desc">We make a contract with you that outlines terms and conditions</p>
+                                </div>
+                            </div>
+                            <div class="license-step">
+                                <div class="step-number">3</div>
+                                <div class="step-icon"><i class="fas fa-key"></i></div>
+                                <div class="step-content">
+                                    <h4 data-i18n="step_license">Receive License</h4>
+                                    <p data-i18n="step_license_desc">We provide you with a license directly from Atlassian</p>
+                                </div>
+                            </div>
+                            <div class="license-step">
+                                <div class="step-number">4</div>
+                                <div class="step-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                <div class="step-content">
+                                    <h4 data-i18n="step_payment">Post-Payment</h4>
+                                    <p data-i18n="step_payment_desc">You pay us after receiving your license (post factum)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, we accept bank transfers. For enterprise clients, we can arrange custom payment terms.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can I get my license?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once the contract is signed, we can typically provide your license within 1-2 business days.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,8 +413,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.svg" alt="Softalyx Logo" width="150" height="42">
-                    <p>Your trusted Atlassian Solutions Partner</p>
+                    <img src="images/logo-white.svg" alt="Softalyx Logo" width="150" height="42" style="filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));">
+                    <p>Expert Atlassian Services</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -236,17 +427,16 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p><i class="fas fa-envelope"></i> info@softalyx.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contact@softalyx.com</p>
+                    <p><i class="fas fa-phone"></i> +380660087119</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/softalyx" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/jkeeq" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Softalyx. All rights reserved.</p>
+                <p>&copy; 2025 Softalyx. All rights reserved. <a href="admin-login.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: underline;">Admin</a></p>
             </div>
         </div>
     </footer>
@@ -263,12 +453,14 @@
             </div>
             <div class="chat-body">
                 <p>Connect with us on:</p>
-                <a href="#" class="chat-option"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="#" class="chat-option"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://t.me/jkeeq" class="chat-option" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             </div>
         </div>
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/apply-admin-changes.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html> 
