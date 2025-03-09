@@ -53,6 +53,18 @@ body.dark-theme .inquiry-form {
     background-color: transparent;
 }
 
+/* Ensure cards and containers have proper dark backgrounds */
+body.dark-theme .benefit-card,
+body.dark-theme .service-card,
+body.dark-theme .team-card,
+body.dark-theme .contact-card,
+body.dark-theme .feature,
+body.dark-theme .license-step {
+    background: linear-gradient(135deg, #081623 0%, #0A1927 100%) !important;
+    border: 1px solid rgba(35, 54, 70, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 body.dark-theme *::before,
 body.dark-theme *::after {
     background-color: transparent;
@@ -188,7 +200,7 @@ body.dark-theme h3,
 body.dark-theme h4, 
 body.dark-theme h5, 
 body.dark-theme h6 {
-    color: #7d9cb5;
+    color: #7d9cb5 !important;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -227,21 +239,6 @@ body.dark-theme strong {
 }
 
 /* Cards and Containers */
-body.dark-theme .benefit-card,
-body.dark-theme .service-card,
-body.dark-theme .team-card,
-body.dark-theme .contact-card,
-body.dark-theme .feature,
-body.dark-theme .license-step {
-    background: linear-gradient(135deg, #071320 0%, #05111C 100%) !important;
-    color: #5d7a91;
-    border: 1px solid rgba(35, 54, 70, 0.3);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-
 body.dark-theme .benefit-card:hover,
 body.dark-theme .service-card:hover,
 body.dark-theme .team-card:hover {
@@ -811,4 +808,32 @@ body.dark-theme .nav-menu ul li a.active:after {
     body.dark-theme .hero-shape {
         display: none !important;
     }
+}
+
+/* Override any white backgrounds */
+body.dark-theme .white-section,
+body.dark-theme .bg-white,
+body.dark-theme [class*="bg-light"],
+body.dark-theme [style*="background-color: white"],
+body.dark-theme [style*="background-color: #fff"],
+body.dark-theme [style*="background: white"],
+body.dark-theme [style*="background: #fff"] {
+    background: linear-gradient(135deg, #071320 0%, #0D1F2D 100%) !important;
+}
+
+/* Ensure proper contrast for text */
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme li,
+body.dark-theme td {
+    color: #5d7a91 !important;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: #7d9cb5 !important;
 } 
