@@ -185,7 +185,6 @@ let translations = {
         'email_us': 'Email Us',
         'call_us': 'Call Us',
         'work_hours': 'Mon-Fri, 9am-6pm EST',
-        'live_chat': 'Live Chat',
         'available_on': 'Available on WhatsApp',
         'and_telegram': 'and Telegram',
         'available_on_telegram': 'Available on Telegram',
@@ -243,7 +242,16 @@ let translations = {
         'contact_success': 'Your message has been sent successfully. We will get back to you soon!',
         'data_consent': 'I consent to Softalyx processing my personal data for the purpose of handling my request and contacting me.',
         // Contact information
-        'visit_us': 'Visit Us'
+        'visit_us': 'Visit Us',
+        'contact_form': 'Contact Form',
+        'your_name': 'Your Name',
+        'your_email': 'Your Email',
+        'your_phone': 'Your Phone (optional)',
+        'your_company': 'Your Company (optional)',
+        'your_message': 'Your Message',
+        'message_sent': 'Message Sent!',
+        'message_error': 'Error Sending Message',
+        'address': 'Address'
     },
     'ua': {
         // Navigation
@@ -423,7 +431,6 @@ let translations = {
         'email_us': 'Напишіть нам',
         'call_us': 'Зателефонуйте нам',
         'work_hours': 'Пн-Пт, 9:00-18:00 EST',
-        'live_chat': 'Живий чат',
         'available_on': 'Доступний у WhatsApp',
         'and_telegram': 'та Telegram',
         'available_on_telegram': 'Доступний у Telegram',
@@ -481,7 +488,16 @@ let translations = {
         'contact_success': 'Ваше повідомлення успішно надіслано. Ми зв\'яжемося з вами найближчим часом!',
         'data_consent': 'Я надаю згоду Softalyx на обробку моїх персональних даних з метою опрацювання мого запиту та зв\'язку зі мною.',
         // Contact information
-        'visit_us': 'Відвідайте нас'
+        'visit_us': 'Відвідайте нас',
+        'contact_form': 'Контактна форма',
+        'your_name': 'Ваше ім\'я',
+        'your_email': 'Ваша електронна пошта',
+        'your_phone': 'Ваш телефон (опціонально)',
+        'your_company': 'Ваша компанія (опціонально)',
+        'your_message': 'Ваше повідомлення',
+        'message_sent': 'Повідомлення надіслано!',
+        'message_error': 'Помилка при надсиланні повідомлення',
+        'address': 'Адреса'
     },
     'ru': {
         // Navigation
@@ -661,7 +677,6 @@ let translations = {
         'email_us': 'Напишите нам',
         'call_us': 'Позвоните нам',
         'work_hours': 'Пн-Пт, 9:00-18:00 EST',
-        'live_chat': 'Живой чат',
         'available_on': 'Доступен в WhatsApp',
         'and_telegram': 'и Telegram',
         'available_on_telegram': 'Доступен в Telegram',
@@ -719,7 +734,16 @@ let translations = {
         'contact_success': 'Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время!',
         'data_consent': 'Я даю согласие Softalyx на обработку моих персональных данных с целью обработки моего запроса и связи со мной.',
         // Contact information
-        'visit_us': 'Посетите нас'
+        'visit_us': 'Посетите нас',
+        'contact_form': 'Контактная форма',
+        'your_name': 'Ваше имя',
+        'your_email': 'Ваша электронная почта',
+        'your_phone': 'Ваш телефон (опционально)',
+        'your_company': 'Ваша компания (опционально)',
+        'your_message': 'Ваше сообщение',
+        'message_sent': 'Сообщение отправлено!',
+        'message_error': 'Ошибка при отправке сообщения',
+        'address': 'Адрес'
     }
 };
 
@@ -1223,7 +1247,16 @@ function updatePageSpecificElements(lang) {
             'contact_success': 'Ваше повідомлення успішно надіслано. Ми зв\'яжемося з вами найближчим часом!',
             'data_consent': 'Я надаю згоду Softalyx на обробку моїх персональних даних з метою опрацювання мого запиту та зв\'язку зі мною.',
             // Contact information
-            'visit_us': 'Відвідайте нас'
+            'visit_us': 'Відвідайте нас',
+            'contact_form': 'Контактна форма',
+            'your_name': 'Ваше ім\'я',
+            'your_email': 'Ваша електронна пошта',
+            'your_phone': 'Ваш телефон (опціонально)',
+            'your_company': 'Ваша компанія (опціонально)',
+            'your_message': 'Ваше повідомлення',
+            'message_sent': 'Повідомлення надіслано!',
+            'message_error': 'Помилка при надсиланні повідомлення',
+            'address': 'Адреса'
         };
         
         // Process all text nodes in the document
