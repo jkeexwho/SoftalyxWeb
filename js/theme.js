@@ -96,6 +96,9 @@ function applyTheme() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
+    // Add transition class for smooth theme change
+    document.body.classList.add('theme-transition');
+    
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.body.classList.add('dark-theme');
         
@@ -107,6 +110,12 @@ function applyTheme() {
     } else {
         document.body.classList.remove('dark-theme');
     }
+    
+    // Safety mechanism: Remove transition class after a short delay
+    // This prevents the transition from getting stuck
+    setTimeout(function() {
+        document.body.classList.remove('theme-transition');
+    }, 500);
 }
 
 /**

@@ -28,8 +28,25 @@ body.dark-theme {
     transition: all 0.3s ease;
 }
 
-/* Force all elements to inherit dark background or use specific dark backgrounds */
-body.dark-theme *:not([class*="icon"]):not(i):not(svg):not(img):not(path) {
+/* Modified selector to be less aggressive and prevent rendering issues */
+body.dark-theme .container,
+body.dark-theme section,
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme .header,
+body.dark-theme .footer,
+body.dark-theme .page-banner,
+body.dark-theme .hero,
+body.dark-theme .benefits,
+body.dark-theme .services-preview,
+body.dark-theme .clients,
+body.dark-theme .contact-info,
+body.dark-theme .contact-form,
+body.dark-theme .faq-section,
+body.dark-theme .license-intro,
+body.dark-theme .product-table,
+body.dark-theme .why-buy,
+body.dark-theme .quote-request {
     background-color: transparent;
 }
 
