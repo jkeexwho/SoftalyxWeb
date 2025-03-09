@@ -252,7 +252,9 @@ let translations = {
         'your_message': 'Your Message',
         'message_sent': 'Message Sent!',
         'message_error': 'Error Sending Message',
-        'address': 'Address'
+        'address': 'Address',
+        join_team: "I want to join Softalyx",
+        partnership_request: "Partnership request with Softalyx"
     },
     'ua': {
         // Navigation
@@ -499,7 +501,9 @@ let translations = {
         'your_message': 'Ваше повідомлення',
         'message_sent': 'Повідомлення надіслано!',
         'message_error': 'Помилка при надсиланні повідомлення',
-        'address': 'Адреса'
+        'address': 'Адреса',
+        join_team: "Я хочу приєднатися до Softalyx",
+        partnership_request: "Запит на партнерство з Softalyx"
     },
     'ru': {
         // Navigation
@@ -746,7 +750,9 @@ let translations = {
         'your_message': 'Ваше сообщение',
         'message_sent': 'Сообщение отправлено!',
         'message_error': 'Ошибка при отправке сообщения',
-        'address': 'Адрес'
+        'address': 'Адрес',
+        join_team: "Я хочу присоединиться к Softalyx",
+        partnership_request: "Запрос на партнерство с Softalyx"
     }
 };
 
@@ -1259,7 +1265,9 @@ function updatePageSpecificElements(lang) {
             'your_message': 'Ваше повідомлення',
             'message_sent': 'Повідомлення надіслано!',
             'message_error': 'Помилка при надсиланні повідомлення',
-            'address': 'Адреса'
+            'address': 'Адреса',
+            join_team: "Я хочу приєднатися до Softalyx",
+            partnership_request: "Запит на партнерство з Softalyx"
         };
         
         // Process all text nodes in the document
