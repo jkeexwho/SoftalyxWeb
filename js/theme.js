@@ -17,6 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         document.body.classList.remove('theme-transition');
     }, 300);
+    
+    // Safety mechanism: If page appears to be black (no visible content), force light theme
+    setTimeout(function() {
+        const bodyBg = window.getComputedStyle(document.body).backgroundColor;
+        // If background is very dark and we're in dark mode, switch to light mode
+        if (bodyBg === 'rgb(0, 0, 0)' || bodyBg === '#000000' || bodyBg === 'rgba(0, 0, 0, 1)') {
+            console.log('Black screen detected, forcing light theme');
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+        }
+    }, 1000);
 });
 
 /**

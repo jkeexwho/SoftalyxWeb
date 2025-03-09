@@ -23,7 +23,7 @@
 
 /* Base Dark Theme - Eliminate all white elements */
 body.dark-theme {
-    background: linear-gradient(135deg, #050D14 0%, #061016 100%) !important;
+    background: linear-gradient(135deg, #071320 0%, #0D1F2D 100%) !important;
     color: #5d7a91 !important;
     transition: all 0.3s ease;
 }
@@ -46,7 +46,10 @@ body.dark-theme .faq-section,
 body.dark-theme .license-intro,
 body.dark-theme .product-table,
 body.dark-theme .why-buy,
-body.dark-theme .quote-request {
+body.dark-theme .quote-request,
+body.dark-theme .service-section,
+body.dark-theme .licensing-section,
+body.dark-theme .inquiry-form {
     background-color: transparent;
 }
 
