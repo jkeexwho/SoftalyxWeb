@@ -1,0 +1,26 @@
+# GitHub Pages configuration
+title: Softalyx - Atlassian Services
+description: Expert Atlassian services, licenses, and support
+url: https://jkeexwho.github.io/SoftalyxWeb
+baseurl: /SoftalyxWeb
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude files from being published
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# Default layout
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default 

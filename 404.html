@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Softalyx</title>
+    <link rel="icon" href="images/faviconsoftalyx.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 70vh;
+            padding: 20px;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: #2C3EED;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
+        }
+        
+        .error-description {
+            font-size: 16px;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .home-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2C3EED 0%, #4F60FF 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(44, 62, 237, 0.3);
+        }
+        
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(44, 62, 237, 0.4);
+        }
+        
+        body.dark-theme .error-code {
+            color: #4F60FF;
+        }
+        
+        body.dark-theme .error-message {
+            color: #7d9cb5;
+        }
+        
+        body.dark-theme .error-description {
+            color: #5d7a91;
+        }
+    </style>
+    <script>
+        // Redirect to home page if the URL contains /home
+        if (window.location.pathname.includes('/home')) {
+            window.location.href = '/index.html';
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Softalyx Logo" width="180" height="50">
+                </a>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Page Not Found</h2>
+        <p class="error-description">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <a href="index.html" class="home-button">Go to Homepage</a>
+    </div>
+
+    <script src="js/theme.js"></script>
+</body>
+</html> 
