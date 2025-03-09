@@ -205,7 +205,7 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="company">Company Name</label>
+                        <label for="company" data-i18n="company_name">Company Name</label>
                         <input type="text" id="company" name="company">
                     </div>
                     <div class="form-group">
@@ -214,20 +214,23 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="service-type">Service Type</label>
+                    <label for="service-type" data-i18n="service_type">Service Type</label>
                     <select id="service-type" name="service-type" required>
-                        <option value="">Select a service</option>
-                        <option value="outsourcing">Outsourcing</option>
-                        <option value="licenses">Licenses</option>
-                        <option value="training">Training</option>
-                        <option value="other">Other</option>
+                        <option value="" selected disabled>Select a service</option>
+                        <option value="outsourcing" data-i18n="outsourcing">Outsourcing</option>
+                        <option value="licenses" data-i18n="licenses">Licenses</option>
+                        <option value="training" data-i18n="training">Training</option>
+                        <option value="other" data-i18n="other">Other</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Project Details</label>
+                    <label for="message" data-i18n="project_details">Project Details</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                <div id="form-success" class="admin-alert admin-alert-success" style="display: none; margin-top: 15px;">
+                    Your inquiry has been submitted successfully. We'll get back to you soon!
+                </div>
             </form>
         </div>
     </section>
@@ -241,7 +244,7 @@
                     <p>Expert Atlassian Services</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="quick_links">Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -255,7 +258,7 @@
                     <p><i class="fas fa-phone"></i> +380660087119</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/company/softalyx" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://t.me/jkeeq" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://t.me/softalyxbot" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
@@ -265,26 +268,96 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div class="chat-widget">
-        <button class="chat-toggle">
-            <i class="fas fa-comments"></i>
-        </button>
-        <div class="chat-popup">
-            <div class="chat-header">
-                <h4>Contact Us</h4>
-                <button class="chat-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="chat-body">
-                <p>Connect with us on:</p>
-                <a href="https://t.me/jkeeq" class="chat-option" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-            </div>
-        </div>
-    </div>
-
     <script src="js/main.js"></script>
     <script src="js/apply-admin-changes.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/admin.js"></script>
     <script src="js/theme.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Project form handling
+            const projectForm = document.getElementById('project-form');
+            const formSuccess = document.getElementById('form-success');
+            
+            if (projectForm) {
+                projectForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = {
+                        name: this.querySelector('#name').value,
+                        email: this.querySelector('#email').value,
+                        company: this.querySelector('#company').value,
+                        phone: this.querySelector('#phone').value,
+                        service: this.querySelector('#service-type').value,
+                        message: this.querySelector('#message').value
+                    };
+                    
+                    // Validate the form
+                    if (!formData.name || !formData.email || !formData.message) {
+                        return;
+                    }
+                    
+                    // Save submission to localStorage
+                    if (window.handleContactFormSubmission) {
+                        window.handleContactFormSubmission(formData);
+                    } else {
+                        // Fallback if admin.js is not loaded
+                        const submissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
+                        submissions.unshift({
+                            id: Date.now(),
+                            date: new Date().toISOString(),
+                            ...formData
+                        });
+                        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+                        
+                        // Also directly create a ticket for the admin panel
+                        const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+                        
+                        // Get the highest ticket number to increment
+                        let highestNum = 0;
+                        tickets.forEach(ticket => {
+                            if (ticket.id && ticket.id.startsWith('CONTACT-')) {
+                                const num = parseInt(ticket.id.split('-')[1]);
+                                if (!isNaN(num) && num > highestNum) {
+                                    highestNum = num;
+                                }
+                            }
+                        });
+                        
+                        // Capitalize first letter of service
+                        const capitalizedService = formData.service ? 
+                            formData.service.charAt(0).toUpperCase() + formData.service.slice(1) : 
+                            'General';
+                        
+                        const ticket = {
+                            id: 'CONTACT-' + (highestNum + 1),
+                            status: 'new',
+                            subject: capitalizedService,
+                            message: `From: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\nCompany: ${formData.company || 'Not provided'}\nService Type: ${capitalizedService}\n\nMessage:\n${formData.message}`,
+                            date: new Date().toISOString(),
+                            submitter: formData.name,
+                            email: formData.email,
+                            company: formData.company || '',
+                            service: formData.service || ''
+                        };
+                        tickets.push(ticket);
+                        localStorage.setItem('tickets', JSON.stringify(tickets));
+                        console.log('Ticket created:', ticket);
+                    }
+                    
+                    // Show success message
+                    formSuccess.style.display = 'block';
+                    
+                    // Reset form
+                    projectForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        formSuccess.style.display = 'none';
+                    }, 5000);
+                });
+            }
+        });
+    </script>
 </body>
 </html> 

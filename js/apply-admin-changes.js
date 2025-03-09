@@ -246,41 +246,32 @@ function applyFaqs() {
 
 // Apply Client Logos
 function applyClientLogos() {
-    const clientLogos = JSON.parse(localStorage.getItem('clientLogos')) || [];
-    const showClients = localStorage.getItem('show-clients') === 'true';
-    console.log('Applying client logos with visibility:', showClients);
+    const clientLogos = [];
+    let showClients = false;
     
-    // Check if clients section exists
+    try {
+        const storedLogos = localStorage.getItem('clientLogos');
+        if (storedLogos) {
+            const parsedLogos = JSON.parse(storedLogos);
+            clientLogos.push(...parsedLogos);
+        }
+        
+        showClients = localStorage.getItem('showClients') === 'true';
+    } catch (error) {
+        console.error('Error loading client logos:', error);
+    }
+    
+    // Find or create the clients section
     let clientsSection = document.querySelector('.clients');
     
-    // If section exists, update its visibility immediately
-    if (clientsSection) {
-        clientsSection.style.display = showClients ? 'block' : 'none';
-        console.log('Set clients section display to:', clientsSection.style.display);
+    // If we're hiding clients or have no logos to show, and the section exists, remove it
+    if ((!showClients || clientLogos.length === 0) && clientsSection) {
+        clientsSection.remove();
+        return;
     }
     
-    // If show clients is enabled but section doesn't exist, create it
-    if (showClients && !clientsSection && clientLogos.length > 0) {
-        // Find where to insert the clients section (after benefits section)
-        const benefitsSection = document.querySelector('.benefits');
-        if (benefitsSection) {
-            clientsSection = document.createElement('section');
-            clientsSection.classList.add('clients');
-            
-            clientsSection.innerHTML = `
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Trusted By Our Clients</h2>
-                    </div>
-                    <div class="client-logos">
-                        <!-- Client logos will be added here -->
-                    </div>
-                </div>
-            `;
-            
-            benefitsSection.after(clientsSection);
-        }
-    }
+    // Section doesn't exist but we want to show it
+    // Removed section creation code to never show the Trusted By section
     
     // If section exists and we're showing it, update its content
     if (clientsSection && showClients && clientLogos.length > 0) {

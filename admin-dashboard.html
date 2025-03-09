@@ -18,6 +18,754 @@
         .language-switcher {
             display: none !important;
         }
+        
+        /* Modern Admin Dashboard Styles */
+        body.admin-dashboard {
+            background-color: #f5f7fa;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body.dark-theme.admin-dashboard {
+            background: linear-gradient(135deg, #050D14 0%, #061016 100%) !important;
+        }
+        
+        .admin-header {
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        body.dark-theme .admin-header {
+            background: linear-gradient(180deg, #071320 0%, #061219 100%) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .admin-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .admin-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .admin-title img {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        body.dark-theme .admin-title img {
+            background-color: transparent;
+            filter: brightness(0) invert(1);
+        }
+        
+        .admin-title h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0;
+            color: #1F2937;
+        }
+        
+        body.dark-theme .admin-title h1 {
+            color: #ffffff;
+        }
+        
+        .admin-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .admin-actions .theme-toggle {
+            background: none;
+            border: none;
+            color: #4B5563;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        body.dark-theme .admin-actions .theme-toggle {
+            color: #7d9cb5;
+        }
+        
+        .admin-actions .theme-toggle:hover {
+            color: #2C3EED;
+            transform: rotate(15deg);
+        }
+        
+        body.dark-theme .admin-actions .theme-toggle:hover {
+            color: #4F60FF;
+        }
+        
+        .btn-secondary {
+            background-color: #EDF2F7;
+            color: #4B5563;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #E2E8F0;
+            color: #1F2937;
+        }
+        
+        body.dark-theme .btn-secondary {
+            background-color: rgba(13, 31, 45, 0.5);
+            color: #5d7a91;
+        }
+        
+        body.dark-theme .btn-secondary:hover {
+            background-color: rgba(13, 31, 45, 0.8);
+            color: #7d9cb5;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2C3EED 0%, #4F60FF 100%);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 5px rgba(44, 62, 237, 0.2);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 4px 10px rgba(44, 62, 237, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .admin-sidebar {
+            background-color: #ffffff;
+            width: 260px;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.05);
+            z-index: 900;
+            transition: all 0.3s ease;
+            padding-bottom: 20px;
+        }
+        
+        body.dark-theme .admin-sidebar {
+            background: linear-gradient(135deg, #071320 0%, #05111C 100%) !important;
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .admin-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .admin-sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .admin-sidebar::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        
+        body.dark-theme .admin-sidebar::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .admin-sidebar-menu {
+            padding: 20px 0;
+        }
+        
+        .admin-sidebar-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .admin-sidebar-menu li {
+            margin: 5px 0;
+        }
+        
+        .admin-sidebar-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #4B5563;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .admin-sidebar-menu a:hover {
+            background-color: #F3F4F6;
+            color: #2C3EED;
+            border-left-color: #2C3EED;
+        }
+        
+        .admin-sidebar-menu a.active {
+            background-color: rgba(44, 62, 237, 0.1);
+            color: #2C3EED;
+            border-left-color: #2C3EED;
+            font-weight: 600;
+        }
+        
+        body.dark-theme .admin-sidebar-menu a {
+            color: #a3b8cc;
+        }
+        
+        body.dark-theme .admin-sidebar-menu a:hover {
+            background-color: rgba(93, 122, 145, 0.1);
+            color: #ffffff;
+            border-left-color: #4F60FF;
+        }
+        
+        body.dark-theme .admin-sidebar-menu a.active {
+            background-color: rgba(79, 96, 255, 0.1);
+            color: #ffffff;
+            border-left-color: #4F60FF;
+        }
+        
+        .admin-sidebar-menu i {
+            margin-right: 10px;
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .admin-content {
+            margin-left: 260px;
+            padding: 100px 30px 30px;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .admin-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .admin-section.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .admin-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 20px 25px;
+        }
+        
+        .admin-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        body.dark-theme .admin-card {
+            background: linear-gradient(135deg, #071320 0%, #05111C 100%) !important;
+            border: 1px solid rgba(35, 54, 70, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        body.dark-theme .admin-card:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .admin-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #EDF2F7;
+        }
+        
+        body.dark-theme .admin-card-header {
+            border-bottom: 1px solid rgba(35, 54, 70, 0.3);
+        }
+        
+        .admin-card-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1F2937;
+            margin: 0;
+        }
+        
+        body.dark-theme .admin-card-header h2 {
+            color: #ffffff;
+        }
+        
+        .admin-card-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1F2937;
+            margin: 0;
+        }
+        
+        body.dark-theme .admin-card-header h3 {
+            color: #ffffff;
+        }
+        
+        /* Alert styles */
+        .admin-alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid;
+        }
+        
+        .admin-alert p {
+            margin: 0;
+            font-size: 14px;
+        }
+        
+        .admin-alert-info {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-left-color: #3B82F6;
+            color: #1E40AF;
+        }
+        
+        body.dark-theme .admin-alert-info {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-left-color: #3B82F6;
+            color: #93C5FD;
+        }
+        
+        /* Ticket System Styles */
+        .tickets-container {
+            position: relative;
+        }
+        
+        .tickets-filter {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .admin-select {
+            padding: 12px 14px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #F9FAFB;
+            color: #1F2937;
+            min-width: 150px;
+        }
+        
+        body.dark-theme .admin-select {
+            background-color: rgba(7, 19, 32, 0.7);
+            border-color: rgba(35, 54, 70, 0.4);
+            color: #5d7a91;
+        }
+        
+        .admin-select:focus {
+            border-color: #2C3EED;
+            box-shadow: 0 0 0 3px rgba(44, 62, 237, 0.1);
+            outline: none;
+        }
+        
+        body.dark-theme .admin-select:focus {
+            border-color: #4F60FF;
+            box-shadow: 0 0 0 3px rgba(79, 96, 255, 0.1);
+        }
+        
+        .ticket-item {
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+        
+        body.dark-theme .ticket-item {
+            border-color: rgba(35, 54, 70, 0.4);
+            background-color: rgba(7, 19, 32, 0.5);
+        }
+        
+        .ticket-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        body.dark-theme .ticket-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #F9FAFB;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        body.dark-theme .ticket-header {
+            background-color: rgba(7, 19, 32, 0.7);
+            border-color: rgba(35, 54, 70, 0.4);
+        }
+        
+        .ticket-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .ticket-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .ticket-status.new {
+            background-color: #EEF2FF;
+            color: #4F46E5;
+        }
+        
+        .ticket-status.in-progress {
+            background-color: #FEF3C7;
+            color: #D97706;
+        }
+        
+        .ticket-status.resolved {
+            background-color: #ECFDF5;
+            color: #059669;
+        }
+        
+        .ticket-status.canceled {
+            background-color: #FEE2E2;
+            color: #DC2626;
+        }
+        
+        body.dark-theme .ticket-status.new {
+            background-color: rgba(79, 70, 229, 0.2);
+            color: #818CF8;
+        }
+        
+        body.dark-theme .ticket-status.in-progress {
+            background-color: rgba(217, 119, 6, 0.2);
+            color: #FCD34D;
+        }
+        
+        body.dark-theme .ticket-status.resolved {
+            background-color: rgba(5, 150, 105, 0.2);
+            color: #34D399;
+        }
+        
+        body.dark-theme .ticket-status.canceled {
+            background-color: rgba(220, 38, 38, 0.2);
+            color: #EF4444;
+        }
+        
+        .ticket-id {
+            font-size: 14px;
+            color: #6B7280;
+        }
+        
+        body.dark-theme .ticket-id {
+            color: #5d7a91;
+        }
+        
+        .ticket-subject {
+            font-weight: 600;
+            color: #111827;
+            font-size: 16px;
+        }
+        
+        body.dark-theme .ticket-subject {
+            color: #ffffff;
+        }
+        
+        .ticket-date {
+            color: #6B7280;
+            font-size: 14px;
+        }
+        
+        body.dark-theme .ticket-date {
+            color: #5d7a91;
+        }
+        
+        .ticket-content {
+            padding: 20px;
+        }
+        
+        .ticket-message {
+            color: #374151;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+        }
+        
+        body.dark-theme .ticket-message {
+            color: #e0e7ef;
+        }
+        
+        .ticket-company {
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background-color: #F3F4F6;
+            border-radius: 6px;
+            color: #4B5563;
+            font-size: 14px;
+            display: inline-block;
+        }
+        
+        body.dark-theme .ticket-company {
+            background-color: rgba(7, 19, 32, 0.7);
+            color: #7d9cb5;
+        }
+        
+        .ticket-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding: 0 20px 20px;
+        }
+        
+        .ticket-reply {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+        }
+        
+        body.dark-theme .ticket-reply {
+            border-color: rgba(35, 54, 70, 0.4);
+        }
+        
+        .ticket-reply textarea {
+            width: 100%;
+            min-height: 100px;
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            resize: vertical;
+        }
+        
+        body.dark-theme .ticket-reply textarea {
+            background-color: rgba(7, 19, 32, 0.7);
+            border-color: rgba(35, 54, 70, 0.4);
+            color: #5d7a91;
+        }
+        
+        .no-tickets {
+            text-align: center;
+            color: #6B7280;
+            padding: 30px;
+            font-style: italic;
+        }
+        
+        body.dark-theme .no-tickets {
+            color: #5d7a91;
+        }
+
+        /* Ticket Consent Styles */
+        .ticket-consent {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #E5E7EB;
+            color: #6B7280;
+            font-size: 14px;
+        }
+
+        body.dark-theme .ticket-consent {
+            border-color: rgba(35, 54, 70, 0.4);
+            color: #5d7a91;
+        }
+
+        .ticket-consent i {
+            margin-right: 5px;
+        }
+
+        .consent-given {
+            color: #10B981;
+        }
+
+        .consent-denied {
+            color: #EF4444;
+        }
+
+        body.dark-theme .consent-given {
+            color: #34D399;
+        }
+
+        body.dark-theme .consent-denied {
+            color: #F87171;
+        }
+
+        /* Active Social Links Styles */
+        .active-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 10px 0;
+        }
+
+        .active-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background-color: #F9FAFB;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme .active-link {
+            background-color: rgba(7, 19, 32, 0.7);
+        }
+
+        .active-link:hover {
+            background-color: #F3F4F6;
+        }
+
+        body.dark-theme .active-link:hover {
+            background-color: rgba(7, 19, 32, 0.9);
+        }
+
+        .active-link i {
+            font-size: 20px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .active-link .fa-linkedin {
+            color: #0077B5;
+        }
+
+        .active-link .fa-telegram {
+            color: #0088cc;
+        }
+
+        .active-link .fa-whatsapp {
+            color: #25D366;
+        }
+
+        body.dark-theme .active-link i {
+            opacity: 0.8;
+        }
+
+        .active-link a {
+            color: #1F2937;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        body.dark-theme .active-link a {
+            color: #7d9cb5;
+        }
+
+        .active-link a:hover {
+            text-decoration: underline;
+        }
+
+        .no-active-links {
+            text-align: center;
+            color: #6B7280;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        body.dark-theme .no-active-links {
+            color: #5d7a91;
+        }
+
+        /* Social Link Preview Styles */
+        .social-link-preview {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #4B5563;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        body.dark-theme .social-link-preview {
+            color: #ffffff;
+        }
+
+        .social-link-preview i {
+            font-size: 16px;
+        }
+
+        .social-link-preview .fa-linkedin {
+            color: #0077B5;
+        }
+
+        .social-link-preview .fa-telegram {
+            color: #0088cc;
+        }
+
+        .social-link-preview .fa-whatsapp {
+            color: #25D366;
+        }
+
+        body.dark-theme .social-link-preview i {
+            opacity: 0.8;
+        }
+
+        .social-link-preview a {
+            color: #2C3EED;
+            text-decoration: none;
+        }
+
+        body.dark-theme .social-link-preview a {
+            color: #ffffff;
+        }
+
+        .social-link-preview a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="admin-dashboard">
@@ -25,12 +773,22 @@
     <header class="admin-header">
         <div class="container">
             <div class="admin-title">
-                <img src="images/logo.svg" alt="Softalyx Logo" width="120" style="background-color: #f0f0f0; padding: 5px; border-radius: 5px;">
+                <img src="images/logo.svg" alt="Softalyx Logo" width="120">
                 <h1>Admin Dashboard</h1>
             </div>
             <div class="admin-actions">
-                <a href="index.html" class="btn btn-secondary" target="_blank">View Site</a>
-                <a href="#" id="admin-logout" class="btn btn-primary">Logout</a>
+                <a href="#" data-section="tickets" class="btn btn-secondary tickets-btn">
+                    <i class="fas fa-ticket-alt"></i> Tickets <span class="ticket-count">0</span>
+                </a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="index.html" class="btn btn-secondary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Site
+                </a>
+                <a href="#" id="admin-logout" class="btn btn-primary">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
             </div>
         </div>
     </header>
@@ -39,32 +797,46 @@
     <aside class="admin-sidebar">
         <nav class="admin-sidebar-menu">
             <ul>
-                <li><a href="#" class="active" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#" class="active" data-section="tickets"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
                 <li><a href="#" data-section="contact-info"><i class="fas fa-address-card"></i> Contact Information</a></li>
                 <li><a href="#" data-section="social-links"><i class="fas fa-share-alt"></i> Social Links</a></li>
-                <li><a href="#" data-section="work-hours"><i class="fas fa-clock"></i> Work Hours</a></li>
+                <li><a href="#" data-section="business-hours"><i class="fas fa-clock"></i> Business Hours</a></li>
                 <li><a href="#" data-section="location"><i class="fas fa-map-marker-alt"></i> Location</a></li>
-                <li><a href="#" data-section="faq-editor"><i class="fas fa-question-circle"></i> FAQ Editor</a></li>
                 <li><a href="#" data-section="footer-settings"><i class="fas fa-shoe-prints"></i> Footer Settings</a></li>
-                <li><a href="#" data-section="logo-settings"><i class="fas fa-image"></i> Logo Settings</a></li>
-                <li><a href="#" data-section="client-logos"><i class="fas fa-building"></i> Client Logos</a></li>
-                <li><a href="#" data-section="language-settings"><i class="fas fa-language"></i> Language Settings</a></li>
-                <li><a href="#" data-section="contact-submissions"><i class="fas fa-envelope"></i> Contact Submissions</a></li>
             </ul>
         </nav>
     </aside>
 
     <!-- Admin Content -->
     <main class="admin-content">
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="admin-section active">
+        <!-- Tickets Section (Main Section) -->
+        <section id="tickets" class="admin-section active">
             <div class="admin-card">
                 <div class="admin-card-header">
-                    <h2>Welcome to Softalyx Admin Panel</h2>
+                    <h2>Contact Tickets</h2>
+                    <div class="admin-card-actions">
+                        <select id="ticket-status-filter" class="admin-select">
+                            <option value="all">All Tickets</option>
+                            <option value="new">New</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="resolved">Resolved</option>
+                            <option value="canceled">Canceled</option>
+                        </select>
+                        <button class="btn btn-secondary refresh-tickets">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
                 </div>
-                <p>Use the sidebar navigation to manage different aspects of your website.</p>
-                <div class="admin-alert admin-alert-info" style="margin-top: 20px;">
-                    <p><strong>Note:</strong> All changes made in this admin panel will be saved to local storage in your browser. In a production environment, these would be saved to a database.</p>
+                <div class="admin-card-body">
+                    <div class="tickets-container">
+                        <div class="tickets-filter">
+                            <input type="text" id="ticket-search" placeholder="Search tickets..." class="admin-search-input">
+                        </div>
+                        <div class="tickets-list" id="tickets-list">
+                            <!-- Tickets will be loaded here -->
+                            <p class="no-tickets">No tickets yet.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,16 +882,19 @@
                         <div class="admin-form-group">
                             <label for="linkedin-url">LinkedIn URL</label>
                             <input type="url" id="linkedin-url" name="linkedin-url" placeholder="https://www.linkedin.com/company/your-company">
+                            <div class="social-link-preview" id="linkedin-preview"></div>
                         </div>
                         <div class="admin-form-group">
                             <label for="telegram-url">Telegram URL</label>
                             <input type="url" id="telegram-url" name="telegram-url" placeholder="https://t.me/your-username">
+                            <div class="social-link-preview" id="telegram-preview"></div>
                         </div>
                     </div>
                     <div class="admin-form-row">
                         <div class="admin-form-group">
                             <label for="whatsapp-url">WhatsApp URL</label>
                             <input type="url" id="whatsapp-url" name="whatsapp-url" placeholder="https://wa.me/your-number">
+                            <div class="social-link-preview" id="whatsapp-preview"></div>
                         </div>
                     </div>
                     <div class="admin-form-actions">
@@ -129,16 +904,16 @@
             </div>
         </section>
 
-        <!-- Work Hours Section -->
-        <section id="work-hours" class="admin-section">
+        <!-- Business Hours Section (renamed from Work Hours) -->
+        <section id="business-hours" class="admin-section">
             <div class="admin-card">
                 <div class="admin-card-header">
-                    <h2>Work Hours</h2>
+                    <h2>Business Hours</h2>
                 </div>
-                <form id="work-hours-form">
+                <form id="business-hours-form">
                     <div class="admin-form-group">
-                        <label for="work-hours">Work Hours</label>
-                        <input type="text" id="work-hours" name="work-hours" value="9:00 - 19:00 Kyiv time">
+                        <label for="business-hours">Business Hours</label>
+                        <input type="text" id="business-hours" name="business-hours" value="9:00 - 19:00 Kyiv time">
                     </div>
                     <div class="admin-form-actions">
                         <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -166,15 +941,6 @@
                         <button type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
                 </form>
-            </div>
-            <div class="admin-card">
-                <div class="admin-card-header">
-                    <h3>Location Visibility</h3>
-                </div>
-                <div class="admin-card-content">
-                    <div id="location-toggle-container"></div>
-                    <p class="form-note">When enabled, the location card and map will be visible on the contact page.</p>
-                </div>
             </div>
         </section>
 
@@ -246,80 +1012,33 @@
             </div>
         </section>
 
-        <!-- Client Logos Section -->
-        <section id="client-logos" class="admin-section">
+        <!-- User Settings -->
+        <section id="user-settings" class="admin-section">
             <div class="admin-card">
                 <div class="admin-card-header">
-                    <h2>Client Logos</h2>
+                    <h2>User Settings</h2>
                 </div>
-                <div class="admin-card">
-                    <div class="admin-card-header">
-                        <h3>Client Logos Visibility</h3>
-                    </div>
-                    <div class="admin-card-content">
-                        <div id="client-toggle-container"></div>
-                        <p class="form-note">When enabled, the "Trusted By Our Clients" section will be visible on the homepage.</p>
-                    </div>
-                </div>
-                <div class="client-logo-grid" id="client-logos-container">
-                    <!-- Client logos will be dynamically added here -->
-                </div>
-                <div class="client-logo-upload">
-                    <input type="file" id="client-logo-upload" accept="image/*">
-                    <label for="client-logo-upload"><i class="fas fa-upload"></i> Upload Client Logo</label>
-                </div>
-                <div class="admin-form-actions">
-                    <button id="save-client-logos" class="btn btn-primary">Save Changes</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Language Settings Section -->
-        <section id="language-settings" class="admin-section">
-            <div class="admin-card">
-                <div class="admin-card-header">
-                    <h2>Language Settings</h2>
-                </div>
-                <div class="admin-card-body">
-                    <div class="language-editor-container">
-                        <div class="language-tabs">
-                            <button class="language-tab active" data-lang="en">English</button>
-                            <button class="language-tab" data-lang="ua">Ukrainian</button>
-                            <button class="language-tab" data-lang="ru">Russian</button>
+                <form id="user-settings-form">
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" value="admin">
                         </div>
-                        
-                        <div class="language-content active" id="lang-en">
-                            <!-- English translations will be loaded here -->
-                        </div>
-                        
-                        <div class="language-content" id="lang-ua">
-                            <!-- Ukrainian translations will be loaded here -->
-                        </div>
-                        
-                        <div class="language-content" id="lang-ru">
-                            <!-- Russian translations will be loaded here -->
+                        <div class="admin-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="admin@example.com">
                         </div>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" id="save-language-settings">Save Changes</button>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Submissions Section -->
-        <section id="contact-submissions" class="admin-section">
-            <div class="admin-card">
-                <div class="admin-card-header">
-                    <h3>Contact Form Submissions</h3>
-                </div>
-                <div class="admin-card-body">
-                    <div class="submissions-container">
-                        <div class="submissions-list" id="submissions-list">
-                            <!-- Contact submissions will be loaded here -->
-                            <p class="no-submissions">No submissions yet.</p>
+                    <div class="admin-form-row">
+                        <div class="admin-form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password">
                         </div>
                     </div>
-                </div>
+                    <div class="admin-form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -328,5 +1047,741 @@
     <script src="js/admin.js"></script>
     <script src="js/language.js"></script>
     <script src="js/toggle-controls.js"></script>
+    <script src="js/theme.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove dashboard section and make tickets the default active section
+            const dashboardSection = document.getElementById('dashboard');
+            if (dashboardSection) {
+                dashboardSection.remove();
+            }
+
+            // Initialize social links form
+            const socialLinksForm = document.getElementById('social-links-form');
+            if (socialLinksForm) {
+                socialLinksForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    saveSocialLinks();
+                });
+            }
+            
+            // Load existing social links
+            loadSocialLinks();
+
+            // Add input event listeners for live preview
+            ['linkedin', 'telegram', 'whatsapp'].forEach(platform => {
+                const input = document.getElementById(`${platform}-url`);
+                if (input) {
+                    input.addEventListener('input', function() {
+                        updateSocialLinkPreview(platform, this.value);
+                    });
+                }
+            });
+
+            // Initialize tickets system
+            loadTickets();
+            
+            // Add event listener for ticket status filter
+            const statusFilter = document.getElementById('ticket-status-filter');
+            if (statusFilter) {
+                statusFilter.addEventListener('change', function() {
+                    filterTickets(this.value);
+                });
+            }
+
+            // Add event listener for ticket search
+            const searchInput = document.getElementById('ticket-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    filterTickets(statusFilter ? statusFilter.value : 'all', this.value);
+                });
+            }
+
+            // Add event listener for refresh button
+            const refreshButton = document.querySelector('.refresh-tickets');
+            if (refreshButton) {
+                refreshButton.addEventListener('click', function() {
+                    location.reload();
+                });
+            }
+
+            // Check for new contact form submissions and convert them to tickets
+            checkNewSubmissions();
+        });
+
+        // Social Links Functions
+        function loadSocialLinks() {
+            const linkedinInput = document.getElementById('linkedin-url');
+            const telegramInput = document.getElementById('telegram-url');
+            const whatsappInput = document.getElementById('whatsapp-url');
+            
+            // Load saved values from localStorage
+            const socialLinks = JSON.parse(localStorage.getItem('socialLinks')) || {};
+            
+            if (linkedinInput) {
+                linkedinInput.value = socialLinks.linkedin || '';
+                updateSocialLinkPreview('linkedin', socialLinks.linkedin || '');
+            }
+            if (telegramInput) {
+                telegramInput.value = socialLinks.telegram || '';
+                updateSocialLinkPreview('telegram', socialLinks.telegram || '');
+            }
+            if (whatsappInput) {
+                whatsappInput.value = socialLinks.whatsapp || '';
+                updateSocialLinkPreview('whatsapp', socialLinks.whatsapp || '');
+            }
+        }
+
+        function updateSocialLinkPreview(platform, url) {
+            const previewDiv = document.getElementById(`${platform}-preview`);
+            if (!previewDiv) return;
+
+            if (url.trim()) {
+                const icon = {
+                    linkedin: 'fa-linkedin',
+                    telegram: 'fa-telegram',
+                    whatsapp: 'fa-whatsapp'
+                }[platform];
+
+                const displayText = {
+                    linkedin: 'LinkedIn Profile',
+                    telegram: 'Telegram Channel',
+                    whatsapp: 'WhatsApp Contact'
+                }[platform];
+
+                previewDiv.innerHTML = `
+                    <i class="fab ${icon}"></i>
+                    <a href="${escapeHtml(url)}" target="_blank">${displayText}</a>`;
+            } else {
+                previewDiv.innerHTML = '';
+            }
+        }
+
+        function saveSocialLinks() {
+            const linkedinUrl = document.getElementById('linkedin-url').value.trim();
+            const telegramUrl = document.getElementById('telegram-url').value.trim();
+            const whatsappUrl = document.getElementById('whatsapp-url').value.trim();
+            
+            const socialLinks = {
+                linkedin: linkedinUrl,
+                telegram: telegramUrl,
+                whatsapp: whatsappUrl
+            };
+            
+            localStorage.setItem('socialLinks', JSON.stringify(socialLinks));
+            showNotification('Social links saved successfully', 'success');
+        }
+
+        // Ticket System Functions
+        function loadTickets() {
+            const ticketsList = document.getElementById('tickets-list');
+            const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+            
+            if (!ticketsList) return;
+            
+            if (tickets.length === 0) {
+                ticketsList.innerHTML = '<p class="no-tickets">No tickets yet.</p>';
+                updateTicketCount(0);
+                return;
+            }
+            
+            // Sort tickets by date (newest first)
+            tickets.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            let ticketsHtml = '';
+            tickets.forEach(ticket => {
+                ticketsHtml += createTicketHtml(ticket);
+            });
+            
+            ticketsList.innerHTML = ticketsHtml;
+            
+            // Count only active tickets (not resolved or canceled)
+            const activeTickets = tickets.filter(t => t.status !== 'resolved' && t.status !== 'canceled');
+            updateTicketCount(activeTickets.length);
+            
+            // Add event listeners for status change buttons
+            document.querySelectorAll('.change-status').forEach(button => {
+                button.addEventListener('click', function() {
+                    const ticketId = this.getAttribute('data-ticket-id');
+                    const newStatus = this.getAttribute('data-status');
+                    changeTicketStatus(ticketId, newStatus);
+                });
+            });
+            
+            // Add event listeners for delete buttons
+            document.querySelectorAll('.delete-ticket').forEach(button => {
+                button.addEventListener('click', function() {
+                    if (confirm('Are you sure you want to delete this ticket? This action cannot be undone.')) {
+                        const ticketId = this.getAttribute('data-ticket-id');
+                        deleteTicket(ticketId);
+                    }
+                });
+            });
+        }
+
+        function createTicketHtml(ticket) {
+            const date = new Date(ticket.date).toLocaleString();
+            return `
+                <div class="ticket-item" data-ticket-id="${ticket.id}" data-status="${ticket.status}">
+                    <div class="ticket-header">
+                        <div class="ticket-info">
+                            <span class="ticket-status ${ticket.status}">${formatStatus(ticket.status)}</span>
+                            <span class="ticket-id">${ticket.id}</span>
+                        </div>
+                        <span class="ticket-date">${date}</span>
+                    </div>
+                    <div class="ticket-content">
+                        <h3 class="ticket-subject">${escapeHtml(ticket.subject)}</h3>
+                        <div class="ticket-message">${escapeHtml(ticket.message)}</div>
+                        ${ticket.consent !== undefined ? `<div class="ticket-consent"><i class="fas ${ticket.consent ? 'fa-check-circle consent-given' : 'fa-times-circle consent-denied'}"></i> Data processing consent: <strong>${ticket.consent ? 'Given' : 'Not given'}</strong></div>` : ''}
+                        <div class="ticket-actions">
+                            ${createStatusButtons(ticket.status, ticket.id)}
+                            <button class="btn btn-danger delete-ticket" data-ticket-id="${ticket.id}">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        function createStatusButtons(currentStatus, ticketId) {
+            const statuses = {
+                'new': ['in-progress', 'canceled'],
+                'in-progress': ['resolved', 'canceled'],
+                'resolved': ['in-progress'],
+                'canceled': ['in-progress']
+            };
+            
+            const availableStatuses = statuses[currentStatus] || [];
+            
+            return availableStatuses.map(status => `
+                <button class="btn btn-secondary change-status" 
+                        data-ticket-id="${ticketId}" 
+                        data-status="${status}">
+                    Mark as ${formatStatus(status)}
+                </button>`).join('');
+        }
+
+        function formatStatus(status) {
+            return status.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
+        }
+
+        function changeTicketStatus(ticketId, newStatus) {
+            const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+            const ticketIndex = tickets.findIndex(t => t.id === ticketId);
+            
+            if (ticketIndex !== -1) {
+                tickets[ticketIndex].status = newStatus;
+                localStorage.setItem('tickets', JSON.stringify(tickets));
+                loadTickets();
+                showNotification(`Ticket status updated to ${formatStatus(newStatus)}`, 'success');
+            }
+        }
+
+        function filterTickets(status, searchQuery = '') {
+            const tickets = document.querySelectorAll('.ticket-item');
+            const searchLower = searchQuery.toLowerCase();
+            
+            tickets.forEach(ticket => {
+                const ticketStatus = ticket.getAttribute('data-status');
+                const ticketContent = ticket.textContent.toLowerCase();
+                const statusMatch = status === 'all' || ticketStatus === status;
+                const searchMatch = !searchQuery || ticketContent.includes(searchLower);
+                
+                ticket.style.display = statusMatch && searchMatch ? 'block' : 'none';
+            });
+        }
+
+        function updateTicketCount(count) {
+            const ticketCount = document.querySelector('.ticket-count');
+            if (ticketCount) {
+                ticketCount.textContent = count;
+            }
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `admin-notification admin-notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-info-circle'} notification-icon"></i>
+                    <span>${message}</span>
+                </div>
+                <button class="notification-close"><i class="fas fa-times"></i></button>
+            `;
+            
+            document.body.appendChild(notification);
+            setTimeout(() => notification.classList.add('show'), 100);
+            
+            const closeBtn = notification.querySelector('.notification-close');
+            closeBtn.addEventListener('click', () => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            });
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+
+        function deleteTicket(ticketId) {
+            const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+            const updatedTickets = tickets.filter(ticket => ticket.id !== ticketId);
+            
+            localStorage.setItem('tickets', JSON.stringify(updatedTickets));
+            loadTickets();
+            showNotification('Ticket deleted successfully', 'success');
+        }
+
+        function checkNewSubmissions() {
+            console.log("Checking for new contact form submissions");
+            const submissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
+            console.log("Found submissions:", submissions.length);
+            
+            if (submissions.length > 0) {
+                const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+                
+                // Get the highest ticket number to increment
+                let highestNum = 0;
+                tickets.forEach(ticket => {
+                    if (ticket.id && ticket.id.startsWith('CONTACT-')) {
+                        const num = parseInt(ticket.id.split('-')[1]);
+                        if (!isNaN(num) && num > highestNum) {
+                            highestNum = num;
+                        }
+                    }
+                });
+                
+                submissions.forEach(submission => {
+                    console.log("Converting submission to ticket:", submission);
+                    // Create a new ticket from the submission with the CONTACT-X format
+                    highestNum++;
+                    
+                    // Determine subject based on submission type with first letter capitalized
+                    let subject = submission.subject || 'New Contact Request';
+                    // Ensure subject starts with capital letter
+                    subject = subject.charAt(0).toUpperCase() + subject.slice(1);
+                    
+                    if (submission.service) {
+                        // Capitalize first letter of service
+                        const capitalizedService = submission.service.charAt(0).toUpperCase() + submission.service.slice(1);
+                        subject = capitalizedService;
+                    }
+                    
+                    // Create message content including company name as regular info
+                    let messageContent = `From: ${submission.name}\nEmail: ${submission.email}\nPhone: ${submission.phone || 'Not provided'}`;
+                    
+                    // Add company name if available (as regular info, not in a separate container)
+                    if (submission.company) {
+                        messageContent += `\nCompany: ${submission.company}`;
+                    }
+                    
+                    // Add service type if available
+                    if (submission.service) {
+                        // Capitalize first letter of service
+                        const capitalizedService = submission.service.charAt(0).toUpperCase() + submission.service.slice(1);
+                        messageContent += `\nService Type: ${capitalizedService}`;
+                    }
+                    
+                    // Add the message
+                    messageContent += `\n\nMessage:\n${submission.message}`;
+                    
+                    const ticket = {
+                        id: 'CONTACT-' + highestNum,
+                        status: 'new',
+                        subject: subject,
+                        message: messageContent,
+                        date: submission.date || new Date().toISOString(),
+                        submitter: submission.name,
+                        email: submission.email,
+                        company: submission.company || '',
+                        service: submission.service || '',
+                        consent: submission.consent
+                    };
+                    
+                    tickets.push(ticket);
+                });
+                
+                // Save updated tickets and clear submissions
+                localStorage.setItem('tickets', JSON.stringify(tickets));
+                localStorage.setItem('contactSubmissions', JSON.stringify([]));
+                
+                // Refresh the tickets display
+                loadTickets();
+                showNotification(`${submissions.length} new ticket(s) created from contact submissions`, 'success');
+            }
+        }
+
+        // Utility function to escape HTML content
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+    
+    <style>
+        /* Enhanced Form Styling */
+        .admin-form-group {
+            margin-bottom: 20px;
+        }
+        
+        .admin-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #1F2937;
+            font-size: 14px;
+        }
+        
+        body.dark-theme .admin-form-group label {
+            color: #ffffff;
+        }
+        
+        .admin-form-group input,
+        .admin-form-group textarea,
+        .admin-form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #F9FAFB;
+            color: #1F2937;
+        }
+        
+        body.dark-theme .admin-form-group input,
+        body.dark-theme .admin-form-group textarea,
+        body.dark-theme .admin-form-group select {
+            background-color: rgba(7, 19, 32, 0.7);
+            border-color: rgba(35, 54, 70, 0.4);
+            color: #ffffff;
+        }
+        
+        .admin-form-group input:focus,
+        .admin-form-group textarea:focus,
+        .admin-form-group select:focus {
+            border-color: #2C3EED;
+            box-shadow: 0 0 0 3px rgba(44, 62, 237, 0.1);
+            outline: none;
+            background-color: #FFFFFF;
+        }
+        
+        body.dark-theme .admin-form-group input:focus,
+        body.dark-theme .admin-form-group textarea:focus,
+        body.dark-theme .admin-form-group select:focus {
+            border-color: #4F60FF;
+            box-shadow: 0 0 0 3px rgba(79, 96, 255, 0.1);
+            background-color: rgba(7, 19, 32, 0.9);
+        }
+        
+        .admin-form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-note {
+            font-size: 13px;
+            color: #6B7280;
+            margin-top: 6px;
+            font-style: italic;
+        }
+        
+        body.dark-theme .form-note {
+            color: #5d7a91;
+        }
+        
+        /* Enhanced Submissions Styling */
+        .submissions-container {
+            position: relative;
+        }
+        
+        .submissions-filter {
+            margin-bottom: 20px;
+        }
+        
+        .admin-search-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background-color: #F9FAFB;
+            color: #1F2937;
+            padding-left: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='%236B7280' d='M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 14px center;
+        }
+        
+        body.dark-theme .admin-search-input {
+            background-color: rgba(7, 19, 32, 0.7);
+            border-color: rgba(35, 54, 70, 0.4);
+            color: #5d7a91;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='%235d7a91' d='M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        
+        .admin-search-input:focus {
+            border-color: #2C3EED;
+            box-shadow: 0 0 0 3px rgba(44, 62, 237, 0.1);
+            outline: none;
+            background-color: #FFFFFF;
+        }
+        
+        body.dark-theme .admin-search-input:focus {
+            border-color: #4F60FF;
+            box-shadow: 0 0 0 3px rgba(79, 96, 255, 0.1);
+            background-color: rgba(7, 19, 32, 0.9);
+        }
+        
+        .submission-item {
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+        
+        body.dark-theme .submission-item {
+            border-color: rgba(35, 54, 70, 0.4);
+            background-color: rgba(7, 19, 32, 0.5);
+        }
+        
+        .submission-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        body.dark-theme .submission-item:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .submission-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #F9FAFB;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        body.dark-theme .submission-header {
+            background-color: rgba(7, 19, 32, 0.7);
+            border-color: rgba(35, 54, 70, 0.4);
+        }
+        
+        .submission-name {
+            font-weight: 600;
+            color: #111827;
+            font-size: 16px;
+        }
+        
+        body.dark-theme .submission-name {
+            color: #7d9cb5;
+        }
+        
+        .submission-date {
+            color: #6B7280;
+            font-size: 14px;
+        }
+        
+        body.dark-theme .submission-date {
+            color: #5d7a91;
+        }
+        
+        .submission-details {
+            padding: 20px;
+        }
+        
+        .submission-detail {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .submission-label {
+            font-weight: 500;
+            color: #4B5563;
+            width: 80px;
+            flex-shrink: 0;
+        }
+        
+        body.dark-theme .submission-label {
+            color: #6b8aa3;
+        }
+        
+        .submission-value {
+            color: #1F2937;
+        }
+        
+        body.dark-theme .submission-value {
+            color: #5d7a91;
+        }
+        
+        .submission-email-link,
+        .submission-phone-link {
+            color: #2C3EED;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .submission-email-link:hover,
+        .submission-phone-link:hover {
+            color: #4F60FF;
+            text-decoration: underline;
+        }
+        
+        body.dark-theme .submission-email-link,
+        body.dark-theme .submission-phone-link {
+            color: #4F60FF;
+        }
+        
+        body.dark-theme .submission-email-link:hover,
+        body.dark-theme .submission-phone-link:hover {
+            color: #6b8aa3;
+        }
+        
+        .submission-message {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #E5E7EB;
+            color: #374151;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        
+        body.dark-theme .submission-message {
+            border-color: rgba(35, 54, 70, 0.4);
+            color: #5d7a91;
+        }
+        
+        .submission-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px 20px;
+        }
+        
+        .btn-danger {
+            background-color: #EF4444;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .btn-danger:hover {
+            background-color: #DC2626;
+            box-shadow: 0 2px 5px rgba(239, 68, 68, 0.3);
+        }
+        
+        .no-submissions {
+            text-align: center;
+            color: #6B7280;
+            padding: 30px;
+            font-style: italic;
+        }
+        
+        body.dark-theme .no-submissions {
+            color: #5d7a91;
+        }
+        
+        /* Notification System */
+        .admin-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .admin-notification.show {
+            transform: translateX(0);
+        }
+        
+        body.dark-theme .admin-notification {
+            background-color: #071320;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            flex: 1;
+        }
+        
+        .notification-icon {
+            font-size: 18px;
+        }
+        
+        .admin-notification-info .notification-icon {
+            color: #3B82F6;
+        }
+        
+        .admin-notification-success .notification-icon {
+            color: #10B981;
+        }
+        
+        .admin-notification-error .notification-icon {
+            color: #EF4444;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: 14px;
+            color: #9CA3AF;
+            cursor: pointer;
+            padding: 0;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .notification-close:hover {
+            color: #4B5563;
+        }
+        
+        body.dark-theme .notification-close {
+            color: #5d7a91;
+        }
+        
+        body.dark-theme .notification-close:hover {
+            color: #7d9cb5;
+        }
+        
+        .admin-card-actions {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
 </body>
 </html> 

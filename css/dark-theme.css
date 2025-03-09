@@ -471,6 +471,7 @@ body.dark-theme .faq-answer {
     border-top: none;
     border-radius: 0 0 6px 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 5px;
 }
 
 body.dark-theme .faq-toggle i {
@@ -783,4 +784,11 @@ body.dark-theme .heading:after {
 /* This ensures we don't break the existing CSS */
 body.dark-theme .nav-menu ul li a.active:after {
     display: block !important; /* Keep the active menu underline */
+}
+
+/* Hide hero-shape in dark mode on mobile */
+@media (max-width: 768px) {
+    body.dark-theme .hero-shape {
+        display: none !important;
+    }
 } 

@@ -46,7 +46,7 @@ let translations = {
         
         // Services section
         'our_services': 'Our Services',
-        'services_subtitle': 'Comprehensive Atlassian solutions for your business needs',
+        'services_subtitle': 'Experience unmatched expertise and value with our Atlassian services',
         'outsourcing': 'Outsourcing',
         'outsourcing_desc': 'Dedicated development teams, DevOps services, and custom integrations',
         'licenses': 'Licenses',
@@ -83,6 +83,15 @@ let translations = {
         'license_reselling': 'License Reselling',
         'atlassian_training': 'Atlassian Training',
         'start_project': 'Start Your Project',
+        
+        // Form fields
+        'company_name': 'Company Name',
+        'service_type': 'Service Type',
+        'project_details': 'Project Details',
+        
+        // FAQ
+        'response_time_question': 'How quickly can you respond to inquiries?',
+        'response_time_answer': 'We typically respond to all inquiries within 2 business days. For urgent matters, please call our support line directly or write to us on Telegram.',
         
         // Services descriptions
         'expert_teams': 'Our expert teams provide comprehensive Atlassian development and support services to help you maximize your investment in Atlassian tools.',
@@ -162,8 +171,6 @@ let translations = {
         'pay_postfactum': 'You pay us (post factum)',
         'payment_methods': 'What payment methods do you accept?',
         'bank_transfers': 'Currently, we accept bank transfers. For enterprise clients, we can arrange custom payment terms.',
-        'license_delivery': 'How quickly can I get my license?',
-        'license_delivery_time': 'Once the contract is signed, we can typically provide your license within 1-2 business days.',
         'response_time': 'How quickly can you respond to inquiries?',
         'response_time_answer': 'We typically respond to all inquiries within 2 business days. For urgent matters, please call our support line directly or write to us on Telegram.',
         'oncall_support': 'Do you offer on-call support for Atlassian products?',
@@ -176,11 +183,12 @@ let translations = {
         // Contact section
         'get_in_touch': 'Get in touch with our Atlassian experts',
         'email_us': 'Email Us',
-        'call_us': 'Or call us at:',
+        'call_us': 'Call Us',
         'work_hours': 'Mon-Fri, 9am-6pm EST',
         'live_chat': 'Live Chat',
         'available_on': 'Available on WhatsApp',
         'and_telegram': 'and Telegram',
+        'available_on_telegram': 'Available on Telegram',
         'fill_form': 'Fill out the form below and we\'ll get back to you as soon as possible',
         'full_name': 'Full Name',
         'email_address': 'Email Address',
@@ -219,7 +227,23 @@ let translations = {
         
         // Licensing Page Title
         'atlassian_licenses': 'Atlassian Licenses',
-        'licensing_subtitle': 'Cost-effective licensing solutions with expert guidance and support'
+        'licensing_subtitle': 'Cost-effective licensing solutions with expert guidance and support',
+        
+        // Updated translation
+        'quick_links': 'Quick Links',
+        'help_with_license': 'Get help with license selection, installation, and ongoing configuration',
+        
+        // Contact form
+        'name': 'Name',
+        'email': 'Email',
+        'phone': 'Phone',
+        'subject': 'Subject',
+        'message': 'Message',
+        'send': 'Send Message',
+        'contact_success': 'Your message has been sent successfully. We will get back to you soon!',
+        'data_consent': 'I consent to Softalyx processing my personal data for the purpose of handling my request and contacting me.',
+        // Contact information
+        'visit_us': 'Visit Us'
     },
     'ua': {
         // Navigation
@@ -255,7 +279,7 @@ let translations = {
         'certified_partner': 'Сертифікований партнер',
         'certified_partner_desc': 'Офіційний партнер Atlassian Solutions з сертифікованими експертами',
         'agile_teams': 'Agile команди',
-        'agile_teams_desc': 'Виділені команди розробників, що працюють за гнучкими методологіями',
+        'agile_teams_desc': 'Спеціалізовані команди розробників, що працюють по гибким методологиям',
         'flexible_pricing': 'Гнучке ціноутворення',
         'flexible_pricing_desc': 'Конкурентні ставки та знижки на обсяг ліцензій',
         'seamless_migration': 'Безперебійна міграція',
@@ -267,7 +291,7 @@ let translations = {
         'outsourcing': 'Аутсорсинг',
         'outsourcing_desc': 'Виділені команди розробників, послуги DevOps та індивідуальні інтеграції',
         'licenses': 'Ліцензії',
-        'licenses_desc': 'Економічні ліцензії на продукти Atlassian зі знижками на обсяг',
+        'licenses_desc': 'Доступні ліцензії на продукти Atlassian зі знижками на обсяг',
         'training': 'Навчання',
         'training_desc': 'Навчальні сесії під керівництвом експертів для вашої команди з продуктів Atlassian',
         'learn_more': 'Дізнатися більше',
@@ -301,6 +325,12 @@ let translations = {
         'atlassian_training': 'Навчання Atlassian',
         'start_project': 'Розпочати проект',
         
+        // Form fields
+        'company_name': 'Назва компанії',
+        'service_type': 'Тип послуги',
+        'project_details': 'Деталі проекту',
+        'other': 'Інше',
+        
         // Services descriptions
         'expert_teams': 'Наші експертні команди надають комплексні послуги з розробки та підтримки Atlassian, щоб допомогти вам максимізувати інвестиції в інструменти Atlassian.',
         'team_customization': 'Налаштування команди',
@@ -320,7 +350,7 @@ let translations = {
         // Training programs
         'training_desc_full': 'Комплексні навчальні програми, розроблені для того, щоб допомогти вашій команді освоїти інструменти Atlassian та максимізувати продуктивність.',
         'customized_workshops': 'Індивідуальні семінари',
-        'customized_workshops_desc': 'Індивідуальні навчальні сесії, зосереджені на конкретних потребах та випадках використання вашої команди.',
+        'customized_workshops_desc': 'Індивідуальні навчальні сесії, зосереджені на конкретних потребах вашої команди.',
         'hands_on_learning': 'Практичне навчання',
         'hands_on_learning_desc': 'Практичні вправи та сценарії з реального світу для забезпечення ефективної передачі знань.',
         'certification_preparation': 'Підготовка до сертифікації',
@@ -360,7 +390,7 @@ let translations = {
         'compliance': 'Відповідність',
         'compliance_desc': 'Забезпечте відповідність вашої організації належному ліцензуванню та регулярним аудитам.',
         'ongoing_support': 'Постійна підтримка',
-        'ongoing_support_desc': 'Виділене управління обліковими записами та технічна підтримка для всіх ваших продуктів Atlassian.',
+        'ongoing_support_desc': 'Професійне управління обліковими записами та технічна підтримка для всіх ваших продуктів Atlassian.',
         
         // Call to action
         'contact_licensing': 'Зв\'яжіться з нашою командою ліцензування для отримання персоналізованої пропозиції, адаптованої до потреб вашої організації.',
@@ -379,25 +409,24 @@ let translations = {
         'pay_postfactum': 'Ви платите нам (постфактум)',
         'payment_methods': 'Які способи оплати ви приймаєте?',
         'bank_transfers': 'Наразі ми приймаємо банківські перекази. Для корпоративних клієнтів ми можемо організувати індивідуальні умови оплати.',
-        'license_delivery': 'Як швидко я можу отримати свою ліцензію?',
-        'license_delivery_time': 'Після підписання контракту ми зазвичай можемо надати вашу ліцензію протягом 1-2 робочих днів.',
         'response_time': 'Як швидко ви можете відповісти на запити?',
-        'response_time_answer': 'Ми зазвичай відповідаємо на всі запити протягом 2 робочих днів. Для термінових питань, будь ласка, зателефонуйте на нашу лінію підтримки безпосередньо або напишіть нам у Telegram.',
+        'response_time_answer': 'Зазвичай ми відповідаємо на всі запити протягом 2 робочих днів. Для термінових питань, будь ласка, зателефонуйте на нашу лінію підтримки або напишіть нам в Telegram.',
         'oncall_support': 'Чи пропонуєте ви підтримку за викликом для продуктів Atlassian?',
         'oncall_support_answer': 'Так, ми пропонуємо підтримку за викликом для критичних проблем з продуктами Atlassian. Наша команда підтримки доступна 24/7 для клієнтів з контрактами на підтримку.',
-        'cloud_migration': 'Чи можете ви допомогти з міграцією в хмарний хостінг?',
-        'cloud_migration_answer': 'Абсолютно! Ми спеціалізуємося на міграціях Atlassian Server до Cloud, а також міграціях Cloud до Cloud, і можемо допомогти забезпечити плавний перехід з мінімальним порушенням ваших робочих процесів.',
+        'cloud_migration': 'Чи можете ви допомогти з міграцією в клауд?',
+        'cloud_migration_answer': 'Абсолютно! Ми спеціалізуємося на міграціях Atlassian Server в клауд, а також міграціях між клауд-рішеннями, і можемо допомогти забезпечити плавний перехід з мінімальним порушенням ваших робочих процесів.',
         'payment_methods_licenses': 'Які способи оплати ви приймаєте для ліцензій?',
         'payment_methods_licenses_answer': 'Ми приймаємо банківські перекази. Для корпоративних клієнтів ми також можемо організувати індивідуальні умови оплати.',
         
         // Contact section
         'get_in_touch': 'Зв\'яжіться з нашими експертами Atlassian',
         'email_us': 'Напишіть нам',
-        'call_us': 'Або зателефонуйте нам:',
+        'call_us': 'Зателефонуйте нам',
         'work_hours': 'Пн-Пт, 9:00-18:00 EST',
         'live_chat': 'Живий чат',
         'available_on': 'Доступний у WhatsApp',
         'and_telegram': 'та Telegram',
+        'available_on_telegram': 'Доступний у Telegram',
         'fill_form': 'Заповніть форму нижче, і ми зв\'яжемося з вами якнайшвидше',
         'full_name': 'Повне ім\'я',
         'email_address': 'Електронна адреса',
@@ -436,7 +465,23 @@ let translations = {
         
         // Licensing Page Title
         'atlassian_licenses': 'Ліцензії Atlassian',
-        'licensing_subtitle': 'Економічно вигідні рішення з ліцензування з експертним керівництвом і підтримкою'
+        'licensing_subtitle': 'Економічно вигідні рішення з ліцензування з експертним керівництвом і підтримкою',
+        
+        // Updated translation
+        'quick_links': 'Швидкі посилання',
+        'help_with_license': 'Отримайте допомогу з вибором ліцензії, встановленням та поточною конфігурацією',
+        
+        // Contact form
+        'name': 'Ім\'я',
+        'email': 'Електронна пошта',
+        'phone': 'Телефон',
+        'subject': 'Тема',
+        'message': 'Повідомлення',
+        'send': 'Надіслати повідомлення',
+        'contact_success': 'Ваше повідомлення успішно надіслано. Ми зв\'яжемося з вами найближчим часом!',
+        'data_consent': 'Я надаю згоду Softalyx на обробку моїх персональних даних з метою опрацювання мого запиту та зв\'язку зі мною.',
+        // Contact information
+        'visit_us': 'Відвідайте нас'
     },
     'ru': {
         // Navigation
@@ -472,7 +517,7 @@ let translations = {
         'certified_partner': 'Сертифицированный партнер',
         'certified_partner_desc': 'Официальный партнер Atlassian Solutions с сертифицированными экспертами',
         'agile_teams': 'Agile команды',
-        'agile_teams_desc': 'Выделенные команды разработчиков, работающие по гибким методологиям',
+        'agile_teams_desc': 'Специализированные команды разработчиков, работающие по гибким методологиям',
         'flexible_pricing': 'Гибкое ценообразование',
         'flexible_pricing_desc': 'Конкурентные ставки и скидки на объем лицензий',
         'seamless_migration': 'Бесперебойная миграция',
@@ -484,7 +529,7 @@ let translations = {
         'outsourcing': 'Аутсорсинг',
         'outsourcing_desc': 'Выделенные команды разработчиков, услуги DevOps и индивидуальные интеграции',
         'licenses': 'Лицензии',
-        'licenses_desc': 'Экономичные лицензии на продукты Atlassian со скидками на объем',
+        'licenses_desc': 'Доступные лицензии на продукты Atlassian со скидками на объем',
         'training': 'Обучение',
         'training_desc': 'Обучающие сессии под руководством экспертов для вашей команды по продуктам Atlassian',
         'learn_more': 'Узнать больше',
@@ -517,6 +562,12 @@ let translations = {
         'license_reselling': 'Перепродажа лицензий',
         'atlassian_training': 'Обучение Atlassian',
         'start_project': 'Начать проект',
+        
+        // Form fields
+        'company_name': 'Название компании',
+        'service_type': 'Тип услуги',
+        'project_details': 'Детали проекта',
+        'other': 'Другое',
         
         // Services descriptions
         'expert_teams': 'Наши экспертные команды предоставляют комплексные услуги по разработке и поддержке Atlassian, чтобы помочь вам максимизировать инвестиции в инструменты Atlassian.',
@@ -577,7 +628,7 @@ let translations = {
         'compliance': 'Соответствие',
         'compliance_desc': 'Обеспечьте соответствие вашей организации надлежащему лицензированию и регулярным аудитам.',
         'ongoing_support': 'Постоянная поддержка',
-        'ongoing_support_desc': 'Выделенное управление учетными записями и техническая поддержка для всех ваших продуктов Atlassian.',
+        'ongoing_support_desc': 'Профессиональное управление учетными записями и техническая поддержка для всех ваших продуктов Atlassian.',
         
         // Call to action
         'contact_licensing': 'Свяжитесь с нашей командой лицензирования для получения персонализированного предложения, адаптированного к потребностям вашей организации.',
@@ -596,10 +647,8 @@ let translations = {
         'pay_postfactum': 'Вы платите нам (постфактум)',
         'payment_methods': 'Какие способы оплаты вы принимаете?',
         'bank_transfers': 'В настоящее время мы принимаем банковские переводы. Для корпоративных клиентов мы можем организовать индивидуальные условия оплаты.',
-        'license_delivery': 'Как быстро я могу получить свою лицензию?',
-        'license_delivery_time': 'После подписания контракта мы обычно можем предоставить вашу лицензию в течение 1-2 рабочих дней.',
         'response_time': 'Как быстро вы можете ответить на запросы?',
-        'response_time_answer': 'Мы обычно отвечаем на все запросы в течение 2 рабочих дней. Для срочных вопросов, пожалуйста, позвоните на нашу линию поддержки напрямую или напишите нам в Telegram.',
+        'response_time_answer': 'Обычно мы отвечаем на все запросы в течение 2 рабочих дней. Для срочных вопросов, пожалуйста, позвоните на нашу линию поддержки или напишите нам в Telegram.',
         'oncall_support': 'Предлагаете ли вы поддержку по вызову для продуктов Atlassian?',
         'oncall_support_answer': 'Да, мы предлагаем поддержку по вызову для критических проблем с продуктами Atlassian. Наша команда поддержки доступна 24/7 для клиентов с контрактами на поддержку.',
         'cloud_migration': 'Можете ли вы помочь с миграцией в облачный хостинг?',
@@ -610,11 +659,12 @@ let translations = {
         // Contact section
         'get_in_touch': 'Свяжитесь с нашими экспертами Atlassian',
         'email_us': 'Напишите нам',
-        'call_us': 'Или позвоните нам:',
+        'call_us': 'Позвоните нам',
         'work_hours': 'Пн-Пт, 9:00-18:00 EST',
         'live_chat': 'Живой чат',
         'available_on': 'Доступен в WhatsApp',
         'and_telegram': 'и Telegram',
+        'available_on_telegram': 'Доступен в Telegram',
         'fill_form': 'Заполните форму ниже, и мы свяжемся с вами как можно скорее',
         'full_name': 'Полное имя',
         'email_address': 'Электронный адрес',
@@ -653,7 +703,23 @@ let translations = {
         
         // Licensing Page Title
         'atlassian_licenses': 'Лицензии Atlassian',
-        'licensing_subtitle': 'Экономически выгодные решения по лицензированию с экспертным руководством и поддержкой'
+        'licensing_subtitle': 'Экономически выгодные решения по лицензированию с экспертным руководством и поддержкой',
+        
+        // Updated translation
+        'quick_links': 'Быстрые ссылки',
+        'help_with_license': 'Получите помощь с выбором лицензии, установкой и текущей конфигурацией',
+        
+        // Contact form
+        'name': 'Имя',
+        'email': 'Электронная почта',
+        'phone': 'Телефон',
+        'subject': 'Тема',
+        'message': 'Сообщение',
+        'send': 'Отправить сообщение',
+        'contact_success': 'Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время!',
+        'data_consent': 'Я даю согласие Softalyx на обработку моих персональных данных с целью обработки моего запроса и связи со мной.',
+        // Contact information
+        'visit_us': 'Посетите нас'
     }
 };
 
@@ -1141,7 +1207,23 @@ function updatePageSpecificElements(lang) {
             
             // Licensing Page Title
             'atlassian_licenses': 'Ліцензії Atlassian',
-            'licensing_subtitle': 'Економічно вигідні рішення з ліцензування з експертним керівництвом і підтримкою'
+            'licensing_subtitle': 'Економічно вигідні рішення з ліцензування з експертним керівництвом і підтримкою',
+            
+            // Updated translation
+            'quick_links': 'Швидкі посилання',
+            'help_with_license': 'Отримайте допомогу з вибором ліцензії, встановленням та поточною конфігурацією',
+            
+            // Contact form
+            'name': 'Ім\'я',
+            'email': 'Електронна пошта',
+            'phone': 'Телефон',
+            'subject': 'Тема',
+            'message': 'Повідомлення',
+            'send': 'Надіслати повідомлення',
+            'contact_success': 'Ваше повідомлення успішно надіслано. Ми зв\'яжемося з вами найближчим часом!',
+            'data_consent': 'Я надаю згоду Softalyx на обробку моїх персональних даних з метою опрацювання мого запиту та зв\'язку зі мною.',
+            // Contact information
+            'visit_us': 'Відвідайте нас'
         };
         
         // Process all text nodes in the document
@@ -1367,37 +1449,42 @@ function updateElementsBySelector(selector, originalText, newText) {
  * that should not be translated
  */
 function isAdminInterfaceElement(element) {
-    // Check if we're in admin panel
-    if (!document.querySelector('.admin-dashboard')) {
-        return false;
+    // Always return true for admin elements to prevent translation
+    // Check if we're on an admin page
+    const isAdminPage = window.location.href.includes('admin-');
+    
+    if (isAdminPage) {
+        return true; // All elements on admin pages should remain in English
     }
     
-    // Admin interface elements that should not be translated
-    if (
-        // Admin sidebar navigation
-        element.closest('.admin-sidebar-menu') ||
-        // Admin card headers and titles
-        element.closest('.admin-card-header') ||
-        // Admin section titles
-        element.matches('.admin-section-title') ||
-        // Admin navigation tabs (but not their content)
-        element.classList.contains('language-tab') ||
-        // Main admin buttons (not content-specific buttons)
-        (element.tagName === 'BUTTON' && (
-            element.classList.contains('save-btn') ||
-            element.classList.contains('admin-primary-btn')
-        )) ||
-        // Dashboard welcome elements
-        element.classList.contains('welcome-message') ||
-        element.classList.contains('admin-note')
-    ) {
-        return true;
-    }
+    // Check for admin specific elements on other pages
+    const adminClasses = ['admin-', 'dashboard-'];
+    const adminIds = ['admin', 'dashboard'];
     
-    // Allow translation for:
-    // - Form field values and content in admin sections
-    // - Custom user data entered in admin forms
-    // - FAQ content, client info, contact info, etc.
+    // Check element and all its parents for admin-related attributes
+    let currentEl = element;
+    while (currentEl) {
+        // Check for admin-related classes
+        if (currentEl.classList) {
+            for (const className of adminClasses) {
+                if (currentEl.classList.toString().includes(className)) {
+                    return true;
+                }
+            }
+        }
+        
+        // Check for admin-related IDs
+        if (currentEl.id) {
+            for (const idName of adminIds) {
+                if (currentEl.id.includes(idName)) {
+                    return true;
+                }
+            }
+        }
+        
+        // Move up the DOM tree
+        currentEl = currentEl.parentElement;
+    }
     
     return false;
 }

@@ -71,4 +71,79 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check for animations on scroll
     window.addEventListener('scroll', animateOnScroll);
-}); 
+
+    // Clean URL handling
+    handleCleanUrls();
+});
+
+// Function to handle clean URLs
+function handleCleanUrls() {
+    // Get current URL path
+    const path = window.location.pathname;
+    const isHtmlPage = path.endsWith('.html');
+    
+    // Check if we're in a development environment
+    const isDevelopment = window.location.hostname === 'localhost' || 
+                         window.location.hostname.includes('127.0.0.1') ||
+                         window.location.hostname.includes('.test') ||
+                         window.location.hostname.includes('.local') ||
+                         window.location.protocol === 'file:';
+    
+    // For local development, always use .html extensions
+    if (isDevelopment) {
+        // Update all internal links to use .html explicitly
+        const internalLinks = document.querySelectorAll('a[href]');
+        internalLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // Skip external links, anchor links, and links that already have .html
+            if (!href || href.startsWith('http') || href.startsWith('#') || href.includes('.html')) {
+                return;
+            }
+            
+            // Skip links to files with other extensions (images, css, js, etc.)
+            if (href.match(/\.(jpg|jpeg|png|gif|svg|css|js|pdf|zip|doc|xls)$/i)) {
+                return;
+            }
+            
+            // Handle root path
+            if (href === '/') {
+                link.setAttribute('href', 'index.html');
+                return;
+            }
+            
+            // Add .html to internal links
+            if (href.startsWith('/')) {
+                // Remove the leading slash and add .html
+                const cleanUrl = href.substring(1) + '.html';
+                link.setAttribute('href', cleanUrl);
+            } else if (!href.endsWith('/')) {
+                // Add .html to relative links
+                link.setAttribute('href', href + '.html');
+            }
+        });
+    } else {
+        // In production, use clean URLs
+        // Update all internal links to use clean URLs (no .html)
+        const internalLinks = document.querySelectorAll('a[href$=".html"]');
+        internalLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // Skip admin links
+            if (href.includes('admin')) {
+                return;
+            }
+            
+            // Remove .html extension for clean URLs
+            const cleanUrl = href.replace('.html', '');
+            link.setAttribute('href', cleanUrl);
+        });
+        
+        // If we're on an .html page in production, redirect to the clean URL
+        if (isHtmlPage && !path.includes('admin')) {
+            const cleanUrl = path.replace('.html', '');
+            // Use history.replaceState to change the URL without reloading
+            history.replaceState(null, document.title, cleanUrl);
+        }
+    }
+} 

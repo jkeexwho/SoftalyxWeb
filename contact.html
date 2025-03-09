@@ -14,6 +14,56 @@
     <link rel="stylesheet" href="css/dark-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Existing styles */
+        
+        /* Consent Checkbox Styling - Improved horizontal alignment */
+        .consent-wrapper {
+            width: 100%;
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+        
+        .consent-checkbox {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .consent-checkbox input[type="checkbox"] {
+            margin-top: 3px;
+            margin-right: 6px; /* Reduced space between checkbox and text */
+            min-width: 16px;
+            min-height: 16px;
+            flex-shrink: 0;
+        }
+        
+        .consent-checkbox label {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #6B7280;
+            font-weight: normal;
+            text-align: left;
+            flex: 1;
+            padding-top: 2px; /* Align text with checkbox */
+        }
+        
+        body.dark-theme .consent-checkbox label {
+            color: #A3B8CC;
+        }
+        
+        /* Form alignment fixes */
+        #contact-form {
+            text-align: left;
+        }
+        
+        #contact-form .form-group {
+            text-align: left;
+        }
+        
+        #contact-form .btn {
+            margin-left: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -69,7 +119,7 @@
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Email Us</h3>
+                    <h3 data-i18n="email_us">Email Us</h3>
                     <p>contact@softalyx.com</p>
                     <p>sales@softalyx.com</p>
                 </div>
@@ -77,7 +127,7 @@
                     <div class="contact-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <h3>Call Us</h3>
+                    <h3 data-i18n="call_us">Call Us</h3>
                     <p>+380660087119</p>
                     <p>Mon-Fri, 9:00 - 19:00 Kyiv time</p>
                 </div>
@@ -86,7 +136,7 @@
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Visit Us</h3>
+                    <h3 data-i18n="visit_us">Visit Us</h3>
                     <p>Sofia, Bulgaria</p>
                     <p>Lviv, Ukraine</p>
                 </div>
@@ -94,9 +144,9 @@
                     <div class="contact-icon">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <h3>Live Chat</h3>
-                    <p>Available on Telegram</p>
-                    <p>@jkeeq</p>
+                    <h3 data-i18n="live_chat">Live Chat</h3>
+                    <p data-i18n="available_on_telegram">Available on Telegram</p>
+                    <p><a href="https://t.me/softalyxbot" target="_blank">@softalyxbot</a></p>
                 </div>
             </div>
         </div>
@@ -177,11 +227,11 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>How quickly can you respond to inquiries?</h3>
+                        <h3 data-i18n="response_time_question">How quickly can you respond to inquiries?</h3>
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>We typically respond to all inquiries within 2 business days. For urgent matters, please call our support line directly or write to us on Telegram.</p>
+                        <p data-i18n="response_time_answer">We typically respond to all inquiries within 2 business days. For urgent matters, please call our support line directly or write to us on Telegram.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -224,7 +274,7 @@
                     <p>Expert Atlassian Services</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="quick_links">Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -238,7 +288,7 @@
                     <p><i class="fas fa-phone"></i> +380660087119</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/company/softalyx" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://t.me/jkeeq" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://t.me/softalyxbot" target="_blank"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
@@ -248,23 +298,6 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div class="chat-widget">
-        <button class="chat-toggle">
-            <i class="fas fa-comments"></i>
-        </button>
-        <div class="chat-popup">
-            <div class="chat-header">
-                <h4>Contact Us</h4>
-                <button class="chat-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="chat-body">
-                <p>Connect with us on:</p>
-                <a href="https://t.me/jkeeq" class="chat-option" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-            </div>
-        </div>
-    </div>
-
     <script src="js/main.js"></script>
     <script src="js/apply-admin-changes.js"></script>
     <script src="js/language.js"></script>
@@ -272,7 +305,7 @@
     <script src="js/theme.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Handle contact form submission
+            // Contact form handling
             const contactForm = document.getElementById('contact-form');
             const formSuccess = document.getElementById('form-success');
             
@@ -280,16 +313,21 @@
                 contactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Get form data
                     const formData = {
-                        name: document.getElementById('name').value,
-                        email: document.getElementById('email').value,
-                        phone: document.getElementById('phone').value,
-                        subject: document.getElementById('subject').value,
-                        message: document.getElementById('message').value
+                        name: this.querySelector('#name').value,
+                        email: this.querySelector('#email').value,
+                        phone: this.querySelector('#phone').value,
+                        subject: this.querySelector('#subject').value,
+                        message: this.querySelector('#message').value,
+                        company: '' // Add empty company field for consistency
                     };
                     
-                    // Save to admin panel
+                    // Validate the form
+                    if (!formData.name || !formData.email || !formData.message) {
+                        return;
+                    }
+                    
+                    // Save submission to localStorage
                     if (window.handleContactFormSubmission) {
                         window.handleContactFormSubmission(formData);
                     } else {
@@ -301,6 +339,40 @@
                             ...formData
                         });
                         localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+                        
+                        // Also directly create a ticket for the admin panel
+                        const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+                        
+                        // Get the highest ticket number to increment
+                        let highestNum = 0;
+                        tickets.forEach(ticket => {
+                            if (ticket.id && ticket.id.startsWith('CONTACT-')) {
+                                const num = parseInt(ticket.id.split('-')[1]);
+                                if (!isNaN(num) && num > highestNum) {
+                                    highestNum = num;
+                                }
+                            }
+                        });
+                        
+                        // Capitalize first letter of subject if it exists
+                        let formattedSubject = 'New Contact Request';
+                        if (formData.subject) {
+                            formattedSubject = formData.subject.charAt(0).toUpperCase() + formData.subject.slice(1);
+                        }
+                        
+                        const ticket = {
+                            id: 'CONTACT-' + (highestNum + 1),
+                            status: 'new',
+                            subject: formattedSubject,
+                            message: `From: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\n\nMessage:\n${formData.message}`,
+                            date: new Date().toISOString(),
+                            submitter: formData.name,
+                            email: formData.email,
+                            company: formData.company || ''
+                        };
+                        tickets.push(ticket);
+                        localStorage.setItem('tickets', JSON.stringify(tickets));
+                        console.log('Ticket created:', ticket);
                     }
                     
                     // Show success message
