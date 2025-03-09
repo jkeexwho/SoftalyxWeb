@@ -1,8 +1,14 @@
 RewriteEngine On
 
-# Redirect /index.html to /
+# Redirect root to /home
+RewriteRule ^$ /home [R=301,L]
+
+# Map /home to index.html
+RewriteRule ^home$ index.html [L]
+
+# Redirect /index.html to /home
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^index\.html$ /home [R=301,L]
 
 # Redirect URLs with .html extension to clean URLs
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
